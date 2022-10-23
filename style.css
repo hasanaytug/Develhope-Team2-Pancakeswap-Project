@@ -14,7 +14,14 @@
 .cards-text{
   max-width: 300px;
   font-weight: bold;
+  color:#280d5f;
 }
+
+.cards-text p{
+  margin-top: 15px;
+  color:#715f96;
+}
+
 
 #cards-images{
   width: 300px;
