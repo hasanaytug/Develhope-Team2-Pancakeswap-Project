@@ -3,3 +3,144 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* INFOS 1 */
+
+#infos-1 {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  background-color: #e9f2f6;
+  font-family: sans-serif;
+}
+
+#infos-1 h2 {
+  display: inline;
+  margin-left: 0.8em;
+  font-size: 1.2em;
+
+}
+
+#infos-1 button {
+  appearance: none;
+  border: none;
+  background-color: #ebf0f5;
+}
+
+#infos-1 button > svg {
+  fill: #7a6eaa;
+  width: 24px;
+  height: 24px;
+}
+
+#infos-1 button > svg:hover {
+  fill: #aaa9ac;
+  transition: 0.3s;
+}
+
+#category {
+  color: #7645d9;
+}
+
+#infos-1-title-container {
+  width: 60vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+#trade-data-container {
+  margin-top: 1em;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-rows: 1fr;
+  margin-bottom: 100px;
+
+}
+
+.data-box h3 {
+  color: #7645d9;
+  font-size: 0.7rem;
+  margin-bottom: 1em;
+}
+
+.data-box p {
+  color: #7a6eaa;
+  margin-top: 0.3em;
+}
+
+.data-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-left: 1px solid rgb(207, 193, 235);
+  padding-left: 0.9em;
+  height: 70px;
+}
+
+.data-box:first-child {
+  border: none;
+}
+
+#percentage {
+  font-weight: bold;
+  color: black;
+}
+
+@media(max-width: 550px) {
+  .data-box {
+    border: none;
+  }
+}
+
+/* INFOS 2 */
+
+#infos-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  background-image: linear-gradient(#70B6F1, #E9F1F5);
+  height: 150vh;
+  margin-bottom: 20px;
+}
+
+#infos-2 > div {
+  width: 70%;
+  height: 70%;
+  background-image: linear-gradient(#CCE4F9, #F0F6FB);
+  border-radius: 10%;
+}
+
+#infos-2 > div > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width:100%; 
+  height: 100%;
+}
+
+.price-box {
+  width: 30%;
+  height: 50%;
+  border-radius: 7%;
+}
+
+
+#prediction-container {
+  background-image: linear-gradient(#FFB338, #FFE669);
+
+}
+
+#lottery-container {
+  background-image: linear-gradient(#7544D8, #5222B2);
+}
+
