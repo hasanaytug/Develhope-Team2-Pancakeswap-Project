@@ -1,0 +1,28 @@
+/* this debug is for test */
+.debug {
+    border: 1px solid red;
+}
+
+.ibrahim-full-background div:not(.ibrahim-foot) {
+    color: white;
+}
+
+.ibrahim-full-background {
+    height: 1800px;
+    background-color: green;
+}
+
+.ibrahim-head {
+    height: 400px; /* will be calculated as % later */
+    background-color: black;
+}
+
+.ibrahim-middle {
+    height: 700px; /* will be calculated as % later */
+    background-color: blue;
+}
+
+.ibrahim-foot {
+    height: 700px; /* will be calculated as % later */
+    background-color: yellow;
+}
