@@ -74,3 +74,17 @@ body {
 .nav-right .fee {
   display: inline-flex;
 }
+.submenu1 {
+  display: none;
+}
+.nav-left ul li:hover .submenu1 {
+  display: block;
+  position: absolute;
+  background: rgb(239, 233, 233);
+  margin-top: 0.95rem;
+  margin-left: 0.95rem;
+}
+.nav-left ul li:hover .submenu1 ul {
+  display: block;
+  margin: 10px;
+}
