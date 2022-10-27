@@ -1,5 +1,76 @@
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
+}
+
+body {
+  background: rgb(212, 234, 242);
+  background-size: cover;
+  font-family: sans-serif;
+}
+
+.nav {
+  display: flex;
+  padding: 0 0.5rem;
+  background-color: rgb(239, 233, 233);
+  background-size: cover;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.nav-left ul {
+  display: inline-flex;
+  list-style: none;
+}
+.nav-left li {
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+.nav-left a {
+  text-decoration: none;
+}
+.nav-left .mobile-icon {
+  display: none;
+}
+.nav-left .trade:hover {
+  background: rgba(136, 139, 135, 0.7254901961);
+  border-radius: 0.575rem;
+}
+.nav-left .ern:hover {
+  background: rgba(136, 139, 135, 0.7254901961);
+  border-radius: 0.575rem;
+}
+.nav-left .win:hover {
+  background: rgba(136, 139, 135, 0.7254901961);
+  border-radius: 0.575rem;
+}
+.nav-left .nft:hover {
+  background: rgba(136, 139, 135, 0.7254901961);
+  border-radius: 0.575rem;
+}
+
+.nav-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.nav-right ul {
+  display: inline-flex;
+  list-style: none;
+}
+.nav-right li {
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+.nav-right a {
+  text-decoration: none;
+}
+.nav-right .fee {
+  display: inline-flex;
 }
