@@ -33,7 +33,7 @@
   background-color: #ebf0f5;
 }
 
-#infos-1 button > svg {
+#infos-1 button > svg  {
   fill: #7a6eaa;
   width: 24px;
   height: 24px;
@@ -41,7 +41,8 @@
 
 #infos-1 button > svg:hover {
   fill: #aaa9ac;
-  transition: 0.3s;
+  transition: 0.2s;
+  cursor: pointer;
 }
 
 #category {
@@ -111,15 +112,15 @@
 
   width: 100vw;
   background-image: linear-gradient(#70B6F1, #E9F1F5);
-  height: 120vh;
+  height: 100vh;
   margin-bottom: 20px;
 }
 
 #infos-2 > div {
-  width: 70%;
-  height: 70%;
+  width: 60%;
+  height: 80%;
   background-image: linear-gradient(#CCE4F9, #F0F6FB);
-  border-radius: 15%;
+  border-radius: 10%;
 }
 
 #infos-2 > div > div {
@@ -127,25 +128,27 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
   width:100%; 
   height: 100%;
 }
 
 .price-box {
-  width: 30%;
-  height: 50%;
+  width: 273px;
+  height: 355px;
   border-radius: 7%;
 }
 
 
 #prediction-container {
   background-image: linear-gradient(#FFB338, #FFE669);
+  transform: rotate(-4deg);
 
 }
 
 #lottery-container {
   background-image: linear-gradient(#7544D8, #5222B2);
+  transform: rotate(4deg);
 }
 
 /*
@@ -155,16 +158,27 @@
 }
 */
 
-#infos-3-grid {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+#infos-3-flex {
+  display: flex;
+  flex-direction: row;
   justify-items: center;
+
+
   /*background-color: aqua;*/
 }
 
 #infos-3 div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   border-left: 1px solid green;
   width: 550px;
 }
+
+
+
+/*
+#infos-3-grid > div {
+  border: 1px solid purple;
+}
+*/
