@@ -1,0 +1,40 @@
+/* this debug is for test */
+.debug {
+    border: 1px solid red;
+}
+
+.ibrahim-full-background div:not(.ibrahim-foot) {
+    color: white;
+}
+
+.ibrahim-full-background {
+    height: 1800px;
+    background-color: green;
+}
+
+.ibrahim-head {
+    display: flex;
+    justify-content: center; // horizontally
+    align-items: center; // vertically
+    height: 350px;
+    /* will be calculated as % later */
+    background-color: black;
+}
+
+.ibrahim-rectangle {
+    border-radius: 25px;
+    height: 160px;
+    width: 1150px;
+}
+
+.ibrahim-middle {
+    height: 700px;
+    /* will be calculated as % later */
+    background-color: blue;
+}
+
+.ibrahim-foot {
+    height: 700px;
+    /* will be calculated as % later */
+    background-color: yellow;
+}
