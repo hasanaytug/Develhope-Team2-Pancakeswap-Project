@@ -2,89 +2,185 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: Kanit, sans-serif;
+  text-decoration: none;
+  list-style: none;
 }
 
 body {
+  min-height: 100vh;
   background: rgb(212, 234, 242);
-  background-size: cover;
-  font-family: sans-serif;
 }
 
-.nav {
+.navbar {
   display: flex;
-  padding: 0 0.5rem;
-  background-color: rgb(239, 233, 233);
-  background-size: cover;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
+  background-color: #fff;
+  height: 3.5rem;
 }
-
-.nav-left {
+.navbar .nav-left {
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  cursor: pointer;
+  position: relative;
+  align-items: center;
+  background-color: #fff;
+  height: 3.5rem;
 }
-.nav-left ul {
+.navbar .nav-left ul {
   display: inline-flex;
-  list-style: none;
+  align-items: center;
+  justify-content: baseline;
 }
-.nav-left li {
-  margin: 0.5rem;
-  padding: 0.5rem;
+.navbar .nav-left ul li {
+  margin: 0.7rem;
+  padding: 0.7rem;
+  cursor: pointer;
 }
-.nav-left a {
-  text-decoration: none;
+.navbar .nav-left ul li .logo {
+  padding: 0;
+  font-size: 100%;
 }
-.nav-left .mobile-icon {
-  display: none;
-}
-.nav-left .trade:hover {
-  background: rgba(136, 139, 135, 0.7254901961);
-  border-radius: 0.575rem;
-}
-.nav-left .ern:hover {
-  background: rgba(136, 139, 135, 0.7254901961);
-  border-radius: 0.575rem;
-}
-.nav-left .win:hover {
-  background: rgba(136, 139, 135, 0.7254901961);
-  border-radius: 0.575rem;
-}
-.nav-left .nft:hover {
-  background: rgba(136, 139, 135, 0.7254901961);
-  border-radius: 0.575rem;
-}
-
-.nav-right {
-  display: flex;
-  flex-direction: column;
+.navbar .nav-left ul .item:hover .item .tem:hover {
   justify-content: center;
+  align-items: center;
+  background-color: rgb(192, 197, 192);
 }
-.nav-right ul {
-  display: inline-flex;
-  list-style: none;
+.navbar .nav-left ul li.item:hover {
+  background-color: rgb(192, 197, 192);
+  border-radius: 0.3125rem;
 }
-.nav-right li {
-  margin: 0.5rem;
-  padding: 0.5rem;
-}
-.nav-right a {
-  text-decoration: none;
-}
-.nav-right .fee {
-  display: inline-flex;
-}
-.submenu1 {
+.navbar .nav-left .submenu1 {
   display: none;
+  margin-left: -0.8125rem;
+  align-content: flex-start;
 }
-.nav-left ul li:hover .submenu1 {
+.navbar .nav-left .sumenu1 .item:hover ul {
+  display: block;
+  background: rgb(192, 197, 192);
+  border-radius: 0.575rem;
+  position: absolute;
+  padding-left: 0.0625rem;
+  z-index: 1000;
+}
+.navbar .nav-left li:hover .submenu1, .navbar .nav-left .submenu1:hover {
   display: block;
   position: absolute;
-  background: rgb(239, 233, 233);
-  margin-top: 0.95rem;
-  margin-left: 0.95rem;
+  background: #fff;
+  margin-top: 1.2rem;
+  width: 20rem;
+  border-radius: 1rem;
 }
-.nav-left ul li:hover .submenu1 ul {
+.navbar .nav-left li:hover .submenu1 ul, .navbar .nav-left .submenu1:hover ul {
   display: block;
-  margin: 10px;
 }
+.navbar .nav-left li:hover .submenu1 ul li:hover, .navbar .nav-left .submenu1:hover ul li:hover {
+  cursor: pointer;
+  background: rgb(192, 197, 192);
+}
+.navbar .nav-left .submenu5 {
+  display: none;
+  margin-left: -0.8125rem;
+  z-index: 1;
+}
+.navbar .nav-left li:hover .submenu5, .navbar .nav-left .submenu5:hover {
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  margin-top: 1.06rem;
+  padding-left: 0.0625rem;
+  width: 20rem;
+  border-radius: 1.25rem;
+}
+.navbar .nav-left li:hover .submenu5 ul, .navbar .nav-left .submenu5:hover ul {
+  display: block;
+}
+.navbar .nav-left li:hover .submenu5 ul li:hover, .navbar .nav-left .submenu5:hover ul li:hover {
+  cursor: pointer;
+  background: rgb(192, 197, 192);
+}
+.navbar .nav-right {
+  display: flex;
+  position: initial;
+  align-content: center;
+  background-color: #fff;
+  height: 3.5rem;
+}
+.navbar .nav-right ul {
+  display: inline-flex;
+  list-style: none;
+  justify-content: flex-end;
+}
+.navbar .nav-right ul li {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.navbar .nav-right ul li a {
+  text-decoration: none;
+}
+.navbar .nav-right ul li #worldimage {
+  color: rgb(90, 45, 133);
+}
+.navbar .nav-right ul .selection {
+  margin-top: 0.625rem;
+}
+.navbar .nav-right ul .connect {
+  position: relative;
+  margin-top: 0.5rem;
+  align-items: center;
+}
+.navbar .nav-right ul .fee {
+  display: flex;
+  align-items: center;
+}
+.navbar .nav-right ul .fee .dollars {
+  color: rgb(90, 45, 133);
+  font-weight: bold;
+  padding-left: 0.1875rem;
+}
+.navbar .nav-right .sublanguage {
+  display: none;
+  position: absolute;
+}
+.navbar .nav-right li:hover .sublanguage, .navbar .nav-right .sublanguage:hover {
+  display: block;
+  position: absolute;
+}
+.navbar .nav-right li:hover .sublanguage, .navbar .nav-right .sublanguage:hover {
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  padding-left: 0.0625rem;
+  width: 11.25rem;
+  min-height: 2rem;
+  height: auto;
+  border-radius: 0.5rem;
+  margin-left: -4.0625rem;
+}
+.navbar .nav-right li:hover .sublanguage ul, .navbar .nav-right .sublanguage:hover ul {
+  display: block;
+  overflow: auto;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  opacity: 0.0625rem;
+  font-weight: 600;
+  font-size: 1rem;
+  align-items: center;
+  height: 12.5rem;
+  box-shadow: none;
+  line-height: 1;
+}
+.navbar .nav-right li:hover .sublanguage ul li:hover, .navbar .nav-right .sublanguage:hover ul li:hover {
+  color: rgb(90, 45, 133);
+  cursor: pointer;
+  font-family: inherit;
+}
+.navbar .nav-right li:hover .sublanguage ul, .navbar .nav-right .sublanguage:hover ul {
+  display: block;
+}
+.navbar .nav-right li:hover .sublanguage ul li, .navbar .nav-right .sublanguage:hover ul li {
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */

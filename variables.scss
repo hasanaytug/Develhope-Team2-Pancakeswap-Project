@@ -1,0 +1,10 @@
+
+$bgcolor: #fff;
+$margtop: 1.2rem;
+$bg-widt: 20rem;
+$redcolor: rgb(249, 201, 201);
+$hoverbg: rgb(192, 197, 192);
+
+@function rem($sizes) {
+    @return calc($sizes/16) + rem;
+}
