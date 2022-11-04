@@ -113,7 +113,7 @@
   justify-content: center;
   align-items: center;
 
-  width: 100vw;
+  width: 100%;
   background-image: linear-gradient(#70B6F1, #E9F1F5);
   height: 100vh;
   margin-bottom: 20px;
@@ -144,10 +144,6 @@
   width: 280px;
   height: 345px;
   border-radius: 7%;
-  /*
-  padding-top: 1.5em;
-  padding-right: 1.5em;
-  */
   padding: 1.5rem;
 }
 
@@ -178,47 +174,59 @@
   appearance: none;
   border: none;
   border-radius: 10px;
-  background-color: #1fc7d4; /*#44e3ee*/
-  width: 200px;
-  height: 45px;
+  background-color: #1fc7d4; 
+  /*width: 200px;*/
+  width: 90%;
+  height: 40px;
   color: white;
+  box-shadow: 0px 2px #15858e;
 }
 
 .price-box > button:hover {
   opacity: 0.7;
   transition: 0.3s;
-
+  cursor: pointer;
 }
 
 
-/*
-#infos-3 {
+/* INFOS 3 */
+#infos-3 > div {
   display: flex;
   flex-direction: row;
-}
-*/
+  justify-content: center;
 
-#infos-3-flex {
-  display: flex;
-  flex-direction: row;
-  justify-items: center;
-
-
-  /*background-color: aqua;*/
 }
 
-#infos-3 div {
+#infos-3 > div > div {
+  /*border: 1px solid aqua;*/
+  /*width: 50%;*/
   display: grid;
-  grid-template-columns: repeat(auto-fit, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  border-left: 1px solid green;
-  width: 550px;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1rem;
 }
 
-
-
-/*
-#infos-3-grid > div {
-  border: 1px solid purple;
+.infos-3-data-box {
+  border-left: 1px solid rgb(207, 193, 235);
+  width: 300px;
+  height: 50px;
+  padding-left: 5px;
 }
-*/
+
+.infos-3-data-box:nth-child(1), .infos-3-data-box:nth-child(4) {
+  border: none;
+}
+
+.infos-3-data-box > h4 {
+  color: #7a6eaa;
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.infos-3-data-box > p {
+  color: #280D5F;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
