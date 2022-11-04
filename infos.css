@@ -117,10 +117,9 @@
 
 #infos-2 > div > div {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  gap: 1.5rem;
   width: 100%;
   height: 100%;
   border-radius: 7%;
@@ -210,6 +209,39 @@
   flex: 0.4 0 10%;
 }
 
+#infos-cards-flex {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+#infos-2-win {
+  color: #7645D9;
+}
+
+#infos-2-title {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: space-around;
+}
+
+#infos-2-title > h2 {
+  flex: 1;
+  font-size: 2rem;
+}
+
+#infos-2-subtitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 5px;
+  color: #7A6EAA;
+  font-size: 0.9rem;
+}
+
 /* INFOS 3 */
 #infos-3 > div {
   display: flex;
@@ -218,8 +250,6 @@
 }
 
 #infos-3 > div > div {
-  /*border: 1px solid aqua;*/
-  /*width: 50%;*/
   display: grid;
   justify-items: center;
   grid-template-columns: repeat(3, 1fr);
