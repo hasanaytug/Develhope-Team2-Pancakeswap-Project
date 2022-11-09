@@ -17,6 +17,7 @@
   flex-direction: row;
   justify-content: center;
   background-color: #e9f2f6;
+  z-index: -1;
 }
 
 #infos-1 h2 {
@@ -114,7 +115,7 @@
   width: 920px;
   height: 80%;
   border-radius: 50px;
-  z-index: 2;
+  z-index: 1;
   background-color: rgba(255, 255, 255, 0.7);
 }
 
@@ -258,6 +259,10 @@
   position: absolute;
 }
 
+.infos-blurry-img {
+  filter: blur(8px);
+}
+
 #lott-ball-1 {
   top: 23%;
   left: 69%;
@@ -292,9 +297,9 @@
 }
 
 #lott-ball-5 {
-  width: 400px;
-  right: 4%;
-  top: 30%;
+  width: 500px;
+  right: 3%;
+  top: 20%;
   z-index: 1;
   animation: 3s ease-in-out 2s infinite normal none running lott-ball-anim-5;
 }
