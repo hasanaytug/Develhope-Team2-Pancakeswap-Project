@@ -1,3 +1,4 @@
+@import url("./infos-anims.css");
 * {
   margin: 0;
   padding: 0;
@@ -17,6 +18,8 @@
   flex-direction: row;
   justify-content: center;
   background-color: #e9f2f6;
+  position: relative;
+  z-index: 3;
 }
 
 #infos-1 h2 {
@@ -107,7 +110,7 @@
   width: 100%;
   background-image: linear-gradient(#70B6F1, #E9F1F5);
   height: 100vh;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 #infos-2 > div {
@@ -146,7 +149,6 @@
   box-shadow: 0px 4px #ffb835;
   color: #280D5F;
   opacity: 1;
-  z-index: 3;
 }
 
 #lottery-container {
@@ -173,11 +175,11 @@
   border: none;
   border-radius: 10px;
   background-color: #1fc7d4;
-  /*width: 200px;*/
   width: 90%;
   height: 40px;
   color: white;
   box-shadow: 0px 2px #15858e;
+  font-weight: bold;
 }
 
 .price-box > button:hover {
@@ -324,6 +326,7 @@
   left: 0%;
   top: 70%;
   animation: 3s ease-in-out 1s infinite normal none running pred-card-anim-2;
+  z-index: 0;
 }
 
 #pred-card-4 {
@@ -331,101 +334,16 @@
   left: 2%;
   top: 75%;
   animation: 3s ease-in-out 2s infinite normal none running pred-card-anim-2;
+  z-index: 1;
 }
 
-@keyframes lott-ball-anim-1 {
-  0% {
-    transform: translate(0px, 0px);
-  }
-  50% {
-    transform: translate(-4px, 15px);
-  }
-  100% {
-    transform: translate(0px, 0px);
-  }
-}
-@keyframes lott-ball-anim-2 {
-  0% {
-    transform: translate(0px, 0px);
-  }
-  50% {
-    transform: translate(0px, 20px);
-  }
-  100% {
-    transform: translate(0px, 0px);
-  }
-}
-@keyframes lott-ball-anim-3 {
-  0% {
-    transform: translate(0px, 0px);
-  }
-  50% {
-    transform: translate(5px, 8px);
-  }
-  100% {
-    transform: translate(0px, 0px);
-  }
-}
-@keyframes lott-ball-anim-4 {
-  0% {
-    transform: translate(0px, 0px);
-  }
-  50% {
-    transform: translate(8px, 2px);
-  }
-  100% {
-    transform: translate(0px, 0px);
-  }
-}
-@keyframes lott-ball-anim-5 {
-  0% {
-    transform: translate(0px, 0px);
-  }
-  50% {
-    transform: translate(8px, 2px);
-  }
-  100% {
-    transform: translate(0px, 0px);
-  }
-}
-@keyframes pred-card-anim-1 {
-  0% {
-    transform: translate(0px, 0px);
-  }
-  50% {
-    transform: translate(8px, 8px);
-  }
-  100% {
-    transform: translate(0px, 0px);
-  }
-}
-@keyframes pred-card-anim-2 {
-  0% {
-    transform: translate(0px, 0px);
-  }
-  50% {
-    transform: translate(5px, 5px);
-  }
-  100% {
-    transform: translate(0px, 0px);
-  }
-}
-@keyframes pred-card-anim-2 {
-  0% {
-    transform: translate(0px, 0px);
-  }
-  50% {
-    transform: translate(2px, 8px);
-  }
-  100% {
-    transform: translate(0px, 0px);
-  }
-}
 /* INFOS 3 */
 #infos-3 > div {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  position: relative;
+  z-index: 4;
 }
 
 #infos-3 > div > div {
