@@ -1,6 +1,7 @@
+@use 'variables' as i;
 /* this debug is for test */
 .debug {
-    border: 1px solid red;
+    border: 1px solid i.$ibrahim-debug-color;
 }
 
 .ibrahim-full-background div:not(.ibrahim-foot) {
