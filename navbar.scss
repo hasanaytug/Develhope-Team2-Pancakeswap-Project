@@ -1,8 +1,6 @@
-@import "variales.scss";
+
 @use "sass:color";
 @use "variables.scss" as f;
-
-
 
 
 *{
@@ -26,7 +24,7 @@ body{
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background-color: $bgcolor;
+    background-color: f.$bgcolor;
     height: f.rem(56);
     .nav-left {
         display: flex;
@@ -35,7 +33,7 @@ body{
         position: relative;
         //position: initial;
         align-items: center;
-        background-color: $bgcolor; //new
+        background-color: f.$bgcolor; //new
         height: f.rem(56);
 
         ul {
@@ -57,10 +55,10 @@ body{
             .item:hover .item .tem:hover{
                 justify-content: center; ///here
                 align-items: center;
-                background-color: $hoverbg;
+                background-color: f.$hoverbg;
             }
             li.item:hover{
-                background-color: $hoverbg;
+                background-color: f.$hoverbg;
                 border-radius: f.rem(5);
         }
         
@@ -73,7 +71,7 @@ body{
         }
         .sumenu1 .item:hover ul {
             display: block;
-            background: $hoverbg;
+            background: f.$hoverbg;
             border-radius: 0.575rem;
             position: absolute;
             padding-left: f.rem(1);
@@ -82,16 +80,16 @@ body{
         li:hover .submenu1, .submenu1:hover{
             display: block;
             position:absolute;
-            background: $bgcolor;
-            margin-top: $margtop;
-            width: $bg-widt;
+            background: f.$bgcolor;
+            margin-top: f.$margtop;
+            width: f.$bg-widt;
             border-radius: f.rem(16);
             ul{
                 display: block;
 
                 li:hover {
                     cursor: pointer;
-                    background: $hoverbg;
+                    background: f.$hoverbg;
                 }
                 
             }
@@ -107,17 +105,17 @@ body{
         li:hover .submenu5, .submenu5:hover{
             display: block;
             position:absolute;
-            background-color: $bgcolor;
+            background-color: f.$bgcolor;
             margin-top: 1.06rem;
             padding-left: f.rem(1);
-            width: $bg-widt;
+            width: f.$bg-widt;
             border-radius: f.rem(20);
             ul {
                 display: block;
 
                 li:hover {
                     cursor: pointer;
-                    background: $hoverbg;
+                    background: f.$hoverbg;
                 }
                 
             } 
@@ -131,7 +129,7 @@ body{
         display: flex;
         position: initial;
         align-content: center;
-        background-color: $bgcolor;
+        background-color: f.$bgcolor;
         height: f.rem(56);
     
         ul {
@@ -188,7 +186,7 @@ body{
         li:hover .sublanguage, .sublanguage:hover {
             display: block;
             position:absolute;
-            background-color: $bgcolor;
+            background-color: f.$bgcolor;
             padding-left: f.rem(1);
             width: f.rem(180);
             min-height: f.rem(32);
