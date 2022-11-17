@@ -1,0 +1,244 @@
+
+@use "sass:color";
+@use "variables.scss" as f;
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Kanit, sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+body{
+    min-height: 100vh;
+    background: rgb(212, 234, 242);
+
+}
+  
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: f.$bgcolor;
+    height: f.rem(56);
+    .nav-left {
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+        position: relative;
+        //position: initial;
+        align-items: center;
+        background-color: f.$bgcolor; //new
+        height: f.rem(56);
+
+        ul {
+            display: inline-flex;
+            align-items: center;
+            justify-content: baseline;
+            li {
+                margin: 0.70rem;
+                padding: 0.70rem;
+                cursor: pointer;
+                .logo {
+                    padding: 0;
+                    font-size: 100%;
+                }
+                // .trade {
+                //     position: relative;
+                // }
+            }
+            .item:hover .item .tem:hover{
+                justify-content: center; ///here
+                align-items: center;
+                background-color: f.$hoverbg;
+            }
+            li.item:hover{
+                background-color: f.$hoverbg;
+                border-radius: f.rem(5);
+        }
+        
+        }
+        //SUBMENUES IN ON THE LEFT EXEPT 
+        .submenu1 {
+            display: none;
+            margin-left: f.rem(-13);
+            align-content: flex-start;
+        }
+        .sumenu1 .item:hover ul {
+            display: block;
+            background: f.$hoverbg;
+            border-radius: 0.575rem;
+            position: absolute;
+            padding-left: f.rem(1);
+            z-index: 1000;
+        }
+        li:hover .submenu1, .submenu1:hover{
+            display: block;
+            position:absolute;
+            background: f.$bgcolor;
+            margin-top: f.$margtop;
+            width: f.$bg-widt;
+            border-radius: f.rem(16);
+            ul{
+                display: block;
+
+                li:hover {
+                    cursor: pointer;
+                    background: f.$hoverbg;
+                }
+                
+            }
+           
+           
+        }
+            // Three dots(Ellipsis) area
+        .submenu5 {
+            display: none;
+            margin-left: f.rem(-13);
+            z-index: 1;
+        }
+        li:hover .submenu5, .submenu5:hover{
+            display: block;
+            position:absolute;
+            background-color: f.$bgcolor;
+            margin-top: 1.06rem;
+            padding-left: f.rem(1);
+            width: f.$bg-widt;
+            border-radius: f.rem(20);
+            ul {
+                display: block;
+
+                li:hover {
+                    cursor: pointer;
+                    background: f.$hoverbg;
+                }
+                
+            } 
+        }
+        
+    }
+
+
+
+    .nav-right {
+        display: flex;
+        position: initial;
+        align-content: center;
+        background-color: f.$bgcolor;
+        height: f.rem(56);
+    
+        ul {
+            display: inline-flex;
+            list-style: none;
+            justify-content: flex-end;
+    
+            li {
+                margin: 0.50rem;
+                padding: 0.50rem;
+                cursor: pointer;
+                a {
+                    text-decoration: none;
+                }
+                #worldimage {
+                    color: rgb(90, 45, 133);
+                }
+               
+            }
+            
+
+            .selection {
+                margin-top: f.rem(10);
+            }
+
+            .connect {
+                position: relative;
+                margin-top:f.rem(8);
+                align-items: center;
+            }
+
+            .fee{
+                display: flex;
+                align-items: center;
+                .dollars {
+                    color: rgb(90, 45, 133);
+                    font-weight: bold;
+                    padding-left: f.rem(3);  
+                }  
+            }
+            
+
+   
+        }
+
+        .sublanguage {
+            display: none;
+            position: absolute;
+        }
+        li:hover .sublanguage, .sublanguage:hover{
+            display: block;
+            position: absolute;
+        }
+        li:hover .sublanguage, .sublanguage:hover {
+            display: block;
+            position:absolute;
+            background-color: f.$bgcolor;
+            padding-left: f.rem(1);
+            width: f.rem(180);
+            min-height: f.rem(32);
+            height: auto;
+            border-radius: f.rem(8);
+            margin-left: f.rem(-65);
+
+            ul {
+                display: block;
+                overflow:auto ; //overflow: scroll;
+                justify-content: center;
+                letter-spacing: 0.03em;
+                opacity: f.rem(1);
+                font-weight: 600;
+                font-size: f.rem(16);
+                align-items: center;
+                height: f.rem(200);
+                box-shadow: none;
+                line-height: 1;
+                
+                li:hover {
+                    color: rgb(90, 45, 133);
+                    cursor: pointer;
+                    font-family: inherit;
+                    
+                }
+                
+            }
+            ul {
+                display: block;
+                
+                li {
+                    text-align: center;
+                }
+            }
+        }
+        
+    
+    }
+    
+
+   
+  
+ 
+
+
+ 
+   
+    
+  
+  
+ 
+ 
+  
+}
