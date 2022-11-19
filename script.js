@@ -13,10 +13,9 @@ document.querySelectorAll('.data-box > h3').forEach(el => {
 });
 
 document.querySelector('#up-down-button').addEventListener('click', () => {
-    document.querySelector('#category').textContent = infosTitle[++categoryIndex % infosTitle.length];
+    let currentCategory = infosTitle[++categoryIndex % infosTitle.length];
+    document.querySelector('#category').textContent = currentCategory;
     
-    let currentCategory = infosTitle[categoryIndex++ % infosTitle.length];
-        
     dataBoxIndex = 0;
     document.querySelectorAll('.data-box > h3').forEach(el => {
         el.textContent = dataBoxTitles[currentCategory][dataBoxIndex++ % dataBoxTitles[currentCategory].length];
