@@ -1,4 +1,6 @@
 @import url("./infos-anims.css");
+/* INFOS variables */
+/* end of INFOS variables */
 * {
   margin: 0;
   padding: 0;
@@ -180,6 +182,7 @@
   color: white;
   box-shadow: 0px 2px #15858e;
   font-weight: bold;
+  font-size: 1rem;
 }
 
 .price-box > button:hover {
@@ -189,8 +192,9 @@
 }
 
 .price {
-  font-size: 2rem;
+  font-size: 2.3rem;
   font-weight: bold;
+  margin: 8px 0;
 }
 
 #prediction-container > span.price {
@@ -205,6 +209,10 @@
   font-size: 0.95rem;
 }
 
+.price-box > p {
+  line-height: 25px;
+}
+
 #prediction-container > h3 {
   color: #280D5F;
 }
@@ -213,14 +221,14 @@
   color: white;
 }
 
-#lottery-description {
+.price-description {
   font-weight: bold;
-  flex: 0.4 0 10%;
+  flex: 0.3 0 10%;
 }
 
-#prediction-price-description {
-  font-weight: bold;
-  flex: 0.4 0 10%;
+.price-description + p {
+  flex: 0.5;
+  font-weight: normal;
 }
 
 #infos-cards-flex {
@@ -236,9 +244,8 @@
 #infos-2-title {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  justify-content: space-around;
-  flex: 0.5;
+  gap: 1.5rem;
+  justify-content: space-evenly;
 }
 
 #infos-2-title > h2 {
@@ -250,7 +257,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.5rem;
   margin-top: 5px;
   color: #7A6EAA;
   font-size: 0.9rem;
@@ -377,6 +384,22 @@
   color: #280D5F;
   font-weight: bold;
   font-size: 1.5rem;
+}
+
+@media screen and (max-width: 900px) {
+  #infos-3 > div > div {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .infos-3-data-box:nth-child(odd) {
+    border: none;
+  }
+  .infos-3-data-box:nth-child(4) {
+    border-left: 1px solid rgb(207, 193, 235);
+  }
 }
 
 /*# sourceMappingURL=infos.css.map */

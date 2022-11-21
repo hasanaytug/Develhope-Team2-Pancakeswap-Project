@@ -1,3 +1,5 @@
+@use 'variables.scss' as vars;
+
 * {
 margin: 0;
 padding: 0;
@@ -17,7 +19,7 @@ box-sizing: border-box;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: #e9f2f6;
+  background-color: vars.$infos-1-bg-color;
   position: relative;
   z-index: 3;
 }
@@ -32,17 +34,17 @@ font-size: 1.2em;
 #infos-1 button {
 appearance: none;
 border: none;
-background-color: #ebf0f5;
+background-color: vars.$infos-1-button-bg-color;
 }
 
 #up-down-arrow {
-fill: #7a6eaa;
+fill: vars.$up-down-color;
 width: 24px;
 height: 24px;
 }
 
 #up-down-arrow:hover {
-fill: #aaa9ac;
+fill: vars.$up-down-hover-color;
 transition: 0.2s;
 cursor: pointer;
 }
@@ -70,13 +72,13 @@ margin-bottom: 100px;
 }
 
 .data-box h3 {
-color: #7645d9;
+color: vars.$data-box-h3-color;
 font-size: 0.7rem;
 margin-bottom: 1em;
 }
 
 .data-box p {
-color: #7a6eaa;
+color: vars.$data-box-p-color;
 margin-top: 0.3em;
 }
 
@@ -122,7 +124,7 @@ width: 920px;
 height: 80%;
 border-radius: 50px;
 z-index: 1;
-background-color: rgba(255, 255, 255, 0.7);
+background-color: vars.$infos-2-bg-color;
 }
 
 #infos-2>div>div {
@@ -181,12 +183,13 @@ gap: 0.5rem;
 appearance: none;
 border: none;
 border-radius: 10px;
-background-color: #1fc7d4;
+background-color: vars.$price-box-bg-color;
 width: 90%;
 height: 40px;
 color: white;
-box-shadow: 0px 2px #15858e;
+box-shadow: 0px 2px vars.$price-box-shadow;
 font-weight: bold;
+font-size: vars.$infos-2-button-font-size;
 }
 
 .price-box>button:hover {
@@ -196,8 +199,9 @@ cursor: pointer;
 }
 
 .price {
-font-size: 2rem;
+font-size: vars.$price-font-size;
 font-weight: bold;
+margin: 8px 0;
 }
 
 #prediction-container>span.price {
@@ -212,6 +216,10 @@ color: #FEC713;
 font-size: 0.95rem;
 }
 
+.price-box > p {
+  line-height: 25px;
+}
+
 #prediction-container>h3 {
 color: #280D5F;
 }
@@ -220,14 +228,16 @@ color: #280D5F;
 color: white;
 }
 
-#lottery-description {
+
+
+.price-description {
 font-weight: bold;
-flex: 0.4 0 10%;
+flex: 0.3 0 10%;
 }
 
-#prediction-price-description {
-font-weight: bold;
-flex: 0.4 0 10%;
+.price-description + p {
+  flex: 0.5;
+  font-weight: normal;
 }
 
 #infos-cards-flex {
@@ -237,15 +247,14 @@ gap: 1.5rem;
 }
 
 #infos-2-win {
-color: #7645D9;
+color: vars.$infos-2-win;
 }
 
 #infos-2-title {
 display: flex;
 flex-direction: column;
-gap: 1rem;
-justify-content: space-around;
-flex: 0.5;
+gap: 1.5rem;
+justify-content: space-evenly;
 }
 
 #infos-2-title>h2 {
@@ -257,7 +266,7 @@ display: flex;
 flex-direction: column;
 justify-content: space-evenly;
 align-items: center;
-gap: 0.4rem;
+gap: 0.5rem;
 margin-top: 5px;
 color: #7A6EAA;
 font-size: 0.9rem;
@@ -387,4 +396,22 @@ margin-bottom: 7px;
 color: #280D5F;
 font-weight: bold;
 font-size: 1.5rem;
+}
+
+@media screen and (max-width: 900px) {
+  #infos-3>div>div {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1rem;
+    }
+
+  .infos-3-data-box:nth-child(odd) {
+    border: none;
+  }
+
+  .infos-3-data-box:nth-child(4) {
+    border-left: 1px solid rgb(207, 193, 235);
+  }
 }
