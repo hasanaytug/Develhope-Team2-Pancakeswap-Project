@@ -22,6 +22,7 @@ document.querySelectorAll('#percentage').forEach(el => {
 });
 
 let upDownButton = document.querySelector('#up-down-button');
+let timerId = setInterval(() => upDownButton.click(), 6000);
 
 upDownButton.addEventListener('click', () => {
     let currentCategory = infosTitle[++categoryIndex % infosTitle.length];
@@ -37,7 +38,7 @@ upDownButton.addEventListener('click', () => {
     });
 
     document.querySelector('.data-box:first-child > p').textContent = currentCategory === infosTitle[0] ? 'APR' : 'APY';
+    clearInterval(timerId);
+    timerId = setInterval(() => upDownButton.click(), 6000);
 });
-
-setInterval(() => upDownButton.click(), 6000);
 /* END of INFOS */
