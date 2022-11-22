@@ -1,6 +1,7 @@
 @import url("navbar.css");
 @import url(header.css);
 @import url(variables.css);
+@import url(cards.css);
 
 * {
   padding: 0;
