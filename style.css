@@ -2,6 +2,7 @@
 @import url(header.css);
 @import url(variables.css);
 @import url(cards.css);
+@import url("./infos.css");
 
 * {
   padding: 0;
