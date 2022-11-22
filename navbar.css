@@ -7,11 +7,6 @@
   list-style: none;
 }
 
-body {
-  min-height: 100vh;
-  background: rgb(212, 234, 242);
-}
-
 .navbar {
   display: flex;
   justify-content: space-between;
