@@ -11,6 +11,7 @@
 #infos-2,
 #infos-3 {
   font-family: sans-serif;
+  position: relative;
 }
 
 /* INFOS 1 */
@@ -19,8 +20,8 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: #e9f2f6;
-  position: relative;
+  gap: 1rem;
+  background-color: #FAF9FA;
   z-index: 3;
 }
 
@@ -33,11 +34,12 @@
 #infos-1 button {
   appearance: none;
   border: none;
-  background-color: #ebf0f5;
+  background-color: #FAF9FA;
 }
 
 #up-down-arrow {
   fill: #7a6eaa;
+  background-color: #FAF9FA;
   width: 24px;
   height: 24px;
 }
@@ -53,7 +55,7 @@
 }
 
 #infos-1-title-container {
-  width: 60vw;
+  width: 70vw;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -142,7 +144,6 @@
   border-radius: 7%;
   padding: 1.5rem;
   position: relative;
-  /*z-index: 3;*/
 }
 
 #prediction-container {
@@ -238,7 +239,7 @@
 }
 
 #infos-2-win {
-  color: #7645D9;
+  color: #7645d9;
 }
 
 #infos-2-title {
@@ -272,17 +273,18 @@
 }
 
 #lott-ball-1 {
-  top: 23%;
-  left: 69%;
+  top: 0%;
+  bottom: 50%;
+  left: 65%;
   right: 10px;
-  width: 400px;
+  width: 500px;
   animation: 3s ease-in-out 1s infinite normal none running lott-ball-anim-1;
   z-index: 1;
 }
 
 #lott-ball-2 {
-  left: 64.2%;
-  top: 22%;
+  right: 0px;
+  top: 2%;
   width: 510px;
   z-index: 2;
   animation: 3s ease-in-out 2s infinite normal none running lott-ball-anim-2;
@@ -290,7 +292,7 @@
 
 #lott-ball-3 {
   left: 64.2%;
-  top: 22%;
+  top: 2%;
   width: 500px;
   z-index: 1;
   animation: 3s ease-in-out 2s infinite normal none running lott-ball-anim-3;
@@ -299,7 +301,7 @@
 #lott-ball-4 {
   width: 400px;
   right: 3%;
-  top: 33%;
+  top: 13%;
   z-index: 1;
   animation: 3s ease-in-out 2s infinite normal none running lott-ball-anim-4;
 }
@@ -307,7 +309,7 @@
 #lott-ball-5 {
   width: 500px;
   right: 3%;
-  top: 20%;
+  top: 0%;
   z-index: 1;
   animation: 3s ease-in-out 2s infinite normal none running lott-ball-anim-5;
 }
@@ -315,7 +317,7 @@
 #pred-card-1 {
   width: 500px;
   left: 0%;
-  top: 75%;
+  top: 35%;
   animation: 3s ease-in-out 1.5s infinite normal none running pred-card-anim-1;
   z-index: 1;
 }
@@ -323,7 +325,7 @@
 #pred-card-2 {
   width: 500px;
   left: 0%;
-  top: 70%;
+  top: 30%;
   animation: 3s ease-in-out 2s infinite normal none running pred-card-anim-2;
   z-index: 1;
 }
@@ -331,7 +333,7 @@
 #pred-card-3 {
   width: 500px;
   left: 0%;
-  top: 70%;
+  top: 30%;
   animation: 3s ease-in-out 1s infinite normal none running pred-card-anim-2;
   z-index: 0;
 }
@@ -339,7 +341,7 @@
 #pred-card-4 {
   width: 500px;
   left: 2%;
-  top: 75%;
+  top: 35%;
   animation: 3s ease-in-out 2s infinite normal none running pred-card-anim-2;
   z-index: 1;
 }
@@ -350,7 +352,6 @@
   flex-direction: row;
   justify-content: center;
   position: relative;
-  /*z-index: 5;*/
 }
 
 #infos-3 > div > div {
