@@ -34,26 +34,6 @@
             align-items: center;
             justify-content: space-around;
             height: 100%;
-            /*gap: 1rem;*/
-
-            /*
-            li.logo {
-                a {
-                    img {
-                        margin-left: 10px;
-                    }
-                }
-            }
-            */
-            /*
-            li.item {
-                width: 52px;
-                height: 48px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            */
             
             li.item > a {
                 color: #7a6eaa;
@@ -85,6 +65,15 @@
             display: none;
             margin-left: f.rem(-13);
             align-content: flex-start;
+
+            ul {
+                li {
+                    a {
+                        color: #7a6eaa;
+                        font-size: 1rem;
+                    }
+                }
+            }
         }
         .sumenu1 .item:hover ul {
             display: block;
@@ -118,6 +107,14 @@
             display: none;
             margin-left: f.rem(-13);
             z-index: 1;
+            
+            ul {
+                li {
+                    a {
+                        color: #7a6eaa;
+                    }
+                }
+            }
         }
         li:hover .submenu5, .submenu5:hover{
             display: block;
