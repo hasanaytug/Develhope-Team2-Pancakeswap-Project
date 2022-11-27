@@ -1,11 +1,11 @@
 /* START of PHISHING-WARNING */
+const phishingWarning = document.querySelector('#phishing-warning');
+setTimeout(() => phishingWarning.style.display = 'flex', 3000);
+
 const phishingButton = document.querySelector('#phishing-warning > button');
 phishingButton.addEventListener('click', () => {
-  document.querySelector('#phishing-warning').style.display = 'none';
+  phishingWarning.style.display = 'none';
 });
-
-
-
 /* END of PHISHIN-WARNING */
 
 /* START of INFOS */

@@ -27,14 +27,38 @@
   height: 3.5rem;
 }
 .navbar .nav-left ul {
-  display: inline-flex;
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: baseline;
+  justify-content: space-around;
+  height: 100%;
+  /*gap: 1rem;*/
+  /*
+  li.logo {
+      a {
+          img {
+              margin-left: 10px;
+          }
+      }
+  }
+  */
+  /*
+  li.item {
+      width: 52px;
+      height: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  */
+}
+.navbar .nav-left ul li.item > a {
+  color: #7a6eaa;
+  font-size: 0.9rem;
 }
 .navbar .nav-left ul li {
-  margin: 0.7rem;
+  margin: 0.5rem;
   padding: 0.7rem;
-  cursor: pointer;
 }
 .navbar .nav-left ul li .logo {
   padding: 0;
@@ -46,8 +70,9 @@
   background-color: rgb(192, 197, 192);
 }
 .navbar .nav-left ul li.item:hover {
-  background-color: rgb(192, 197, 192);
-  border-radius: 0.3125rem;
+  background-color: #EFF4F5;
+  /*background-color: f.$hoverbg;*/
+  border-radius: 0.625rem;
 }
 .navbar .nav-left .submenu1 {
   display: none;
@@ -134,7 +159,7 @@
   align-items: center;
 }
 .navbar .nav-right ul .fee .dollars {
-  color: rgb(90, 45, 133);
+  color: #7A6EAA;
   font-weight: bold;
   padding-left: 0.1875rem;
 }

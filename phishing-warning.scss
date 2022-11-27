@@ -1,5 +1,5 @@
 #phishing-warning {  
-    display: flex;
+    display: none;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -7,7 +7,6 @@
     width: 100vw;
     background-color: #5E34A5;
     height: 70px;
-
     
     div {
         display: flex;
