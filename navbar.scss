@@ -2,7 +2,6 @@
 @use "sass:color";
 @use "variables.scss" as f;
 
-
 *{
     padding: 0;
     margin: 0;
@@ -11,14 +10,9 @@
     text-decoration: none;
     list-style: none;
 }
-
-
-// body{
-//     min-height: 100vh;
-//     background: rgb(212, 234, 242);
-// }
   
 .navbar {
+
     display: flex;
     justify-content: space-between;
     align-items: center;

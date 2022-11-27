@@ -1,0 +1,66 @@
+#phishing-warning {  
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100vw;
+    background-color: #5E34A5;
+    height: 70px;
+
+    
+    div {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: #4F347E;
+        height: 80%;
+        width: 60%;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        border-radius: 15px;
+        font-size: 0.9rem;
+        color: #82799D;
+        
+        span {
+            font-weight: bolder;
+            color: #E69F3F;
+            margin-left: 5px;
+            font-size: 0.8rem;
+        }
+
+        #url {
+            color: white;
+        }
+        
+    }
+    
+    #phishing-bunny {
+        width: 92px;
+        height: 121px;
+        overflow: hidden;
+    }
+
+    button {
+        background-color: #5E34A5;
+        appearance: none;
+        border: none;
+        position: absolute;
+        right: 0px;
+        width: 45px;
+        height: 48px;
+
+        &:hover {
+            cursor: pointer;
+            opacity: 0.7;
+            transition: 0.3s;
+        }
+
+
+        img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}

@@ -1,3 +1,13 @@
+/* START of PHISHING-WARNING */
+const phishingButton = document.querySelector('#phishing-warning > button');
+phishingButton.addEventListener('click', () => {
+  document.querySelector('#phishing-warning').style.display = 'none';
+});
+
+
+
+/* END of PHISHIN-WARNING */
+
 /* START of INFOS */
 const infosTitle = ["Farms", "Syrup Pools"];
 const dataBoxTitles = {
