@@ -1,8 +1,7 @@
-
 @use "sass:color";
 @use "variables.scss" as f;
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -10,32 +9,34 @@
     text-decoration: none;
     list-style: none;
 }
-  
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    box-sizing: content-box;
     background-color: f.$bgcolor;
     height: f.rem(56);
-    
+    border-bottom: 1px solid #E7E3EB;
+
     .nav-left {
         display: flex;
         justify-content: center;
         cursor: pointer;
         position: relative;
         align-items: center;
-        background-color: f.$bgcolor; 
+        background-color: f.$bgcolor;
         height: f.rem(56);
-        
+
         ul {
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: space-around;
             height: 100%;
-            
-            li.item > a {
+
+            li.item>a {
                 color: #7a6eaa;
                 font-size: 0.9rem;
             }
@@ -43,23 +44,26 @@
             li {
                 margin: 0.50rem;
                 padding: 0.70rem;
-                
+
                 .logo {
                     padding: 0;
                     font-size: 100%;
                 }
             }
-            .item:hover .item .tem:hover{
+
+            .item:hover .item .tem:hover {
                 justify-content: center; ///here
                 align-items: center;
                 background-color: f.$hoverbg;
             }
-            li.item:hover{
+
+            li.item:hover {
                 background-color: #EFF4F5;
                 /*background-color: f.$hoverbg;*/
                 border-radius: f.rem(10);
             }
         }
+
         //SUBMENUES IN ON THE LEFT EXEPT 
         .submenu1 {
             display: none;
@@ -75,6 +79,7 @@
                 }
             }
         }
+
         .sumenu1 .item:hover ul {
             display: block;
             background: f.$hoverbg;
@@ -83,47 +88,69 @@
             padding-left: f.rem(1);
             z-index: 1000;
         }
-        li:hover .submenu1, .submenu1:hover{
+
+        li:hover .submenu1,
+        .submenu1:hover {
             display: block;
-            position:absolute;
+            position: absolute;
             background: f.$bgcolor;
             margin-top: f.$margtop;
             width: f.$bg-widt;
             border-radius: f.rem(16);
-            ul{
+
+            ul {
                 display: block;
 
                 li:hover {
                     cursor: pointer;
                     background: f.$hoverbg;
                 }
-                
+
             }
-           
-           
+
+
         }
-            // Three dots(Ellipsis) area
+
+        // Three dots(Ellipsis) area
         .submenu5 {
             display: none;
             margin-left: f.rem(-13);
             z-index: 1;
+
+
             
             ul {
                 li {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
                     a {
                         color: #7a6eaa;
                     }
                 }
+
+                li:nth-child(4) {
+                    border-top: 1px solid #E7E3EB;
+                    border-bottom: 1px solid #E7E3EB;
+                }
+
+                li > a {
+                    flex: 1;
+                }
             }
         }
-        li:hover .submenu5, .submenu5:hover{
+
+        li:hover .submenu5,
+        .submenu5:hover {
             display: block;
-            position:absolute;
+            position: absolute;
             background-color: f.$bgcolor;
             margin-top: 1.06rem;
             padding-left: f.rem(1);
             width: f.$bg-widt;
             border-radius: f.rem(20);
+
             ul {
                 display: block;
 
@@ -131,10 +158,10 @@
                     cursor: pointer;
                     background: f.$hoverbg;
                 }
-                
-            } 
+
+            }
         }
-        
+
     }
 
 
@@ -145,25 +172,27 @@
         align-content: center;
         background-color: f.$bgcolor;
         height: f.rem(56);
-    
+
         ul {
             display: inline-flex;
             list-style: none;
             justify-content: flex-end;
-    
+
             li {
                 margin: 0.50rem;
                 padding: 0.50rem;
                 cursor: pointer;
+
                 a {
                     text-decoration: none;
                 }
+
                 #worldimage {
                     color: rgb(90, 45, 133);
                 }
-               
+
             }
-            
+
 
             .selection {
                 margin-top: f.rem(10);
@@ -171,35 +200,40 @@
 
             .connect {
                 position: relative;
-                margin-top:f.rem(8);
+                margin-top: f.rem(8);
                 align-items: center;
             }
 
-            .fee{
+            .fee {
                 display: flex;
                 align-items: center;
+
                 .dollars {
                     color: #7A6EAA;
                     font-weight: bold;
-                    padding-left: f.rem(3);  
-                }  
+                    padding-left: f.rem(3);
+                }
             }
-            
 
-   
+
+
         }
 
         .sublanguage {
             display: none;
             position: absolute;
         }
-        li:hover .sublanguage, .sublanguage:hover{
+
+        li:hover .sublanguage,
+        .sublanguage:hover {
             display: block;
             position: absolute;
         }
-        li:hover .sublanguage, .sublanguage:hover {
+
+        li:hover .sublanguage,
+        .sublanguage:hover {
             display: block;
-            position:absolute;
+            position: absolute;
             background-color: f.$bgcolor;
             padding-left: f.rem(1);
             width: f.rem(180);
@@ -210,7 +244,7 @@
 
             ul {
                 display: block;
-                overflow:auto ; //overflow: scroll;
+                overflow: auto; //overflow: scroll;
                 justify-content: center;
                 letter-spacing: 0.03em;
                 opacity: f.rem(1);
@@ -220,39 +254,40 @@
                 height: f.rem(200);
                 box-shadow: none;
                 line-height: 1;
-                
+
                 li:hover {
                     color: rgb(90, 45, 133);
                     cursor: pointer;
                     font-family: inherit;
-                    
+
                 }
-                
+
             }
+
             ul {
                 display: block;
-                
+
                 li {
                     text-align: center;
                 }
             }
         }
-        
-    
+
+
     }
-    
-
-   
-  
- 
 
 
- 
-   
-    
-  
-  
- 
- 
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
