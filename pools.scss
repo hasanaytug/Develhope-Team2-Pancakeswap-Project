@@ -1,0 +1,9 @@
+@use 'variables' as i;
+/* this debug is for test */
+.debug {
+    border: 1px solid i.$ibrahim-debug-color;
+}
+
+.ibrahim-pool-head {
+    background-color: #E7FCFF;
+}
