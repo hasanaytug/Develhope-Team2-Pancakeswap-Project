@@ -174,7 +174,7 @@
 }
 .navbar .nav-right ul #select-network:hover {
   opacity: 0.5;
-  transform: 0.2s;
+  transition: 0.2s;
   cursor: pointer;
 }
 .navbar .nav-right ul #select-network p {
