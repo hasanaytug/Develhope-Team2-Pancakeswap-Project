@@ -131,9 +131,6 @@
   background: rgb(192, 197, 192);
 }
 .navbar .nav-right {
-  display: flex;
-  position: initial;
-  align-content: center;
   background-color: #fff;
   height: 3.5rem;
 }
@@ -157,10 +154,69 @@
 .navbar .nav-right ul .selection {
   margin-top: 0.625rem;
 }
+.navbar .nav-right ul #select-network {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 180px;
+  height: 32px;
+  position: relative;
+  top: 13px;
+  left: 7px;
+  border-radius: 20px;
+  padding-left: 20px;
+  box-sizing: content-box;
+  background-color: #F4F7F8;
+  /*color: #726196;*/
+  color: #280d5f;
+  font-size: 0.9rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px -2px 0px inset;
+}
+.navbar .nav-right ul #select-network:hover {
+  opacity: 0.5;
+  transform: 0.2s;
+  cursor: pointer;
+}
+.navbar .nav-right ul #select-network p {
+  margin-left: 15px;
+  font-weight: bold;
+  flex: 1;
+}
+.navbar .nav-right ul #select-network #bnb {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  left: -5px;
+}
+.navbar .nav-right ul #select-network #network-down-arrow {
+  margin-right: 10px;
+}
+.navbar .nav-right ul #network-selection {
+  display: none;
+}
 .navbar .nav-right ul .connect {
   position: relative;
   margin-top: 0.5rem;
   align-items: center;
+}
+.navbar .nav-right ul .connect button {
+  appearance: none;
+  border: none;
+  width: 149.2px;
+  height: 32px;
+  border-radius: 15px;
+  font-weight: bold;
+  color: white;
+  font-size: 0.9rem;
+  background-color: #6CDAE2;
+  box-shadow: 0px 1.5px #68AAB7;
+  position: relative;
+  bottom: 4px;
+}
+.navbar .nav-right ul .connect button:hover {
+  opacity: 0.6;
+  transition: 0.3s;
+  cursor: pointer;
 }
 .navbar .nav-right ul .fee {
   display: flex;
@@ -188,7 +244,6 @@
   padding-left: 0.0625rem;
   width: 11.25rem;
   min-height: 2rem;
-  /*height: auto;*/
   height: 480px;
   border-radius: 0.5rem;
   margin-left: -4.0625rem;

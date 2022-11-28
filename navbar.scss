@@ -165,9 +165,6 @@
 
 
     .nav-right {
-        display: flex;
-        position: initial;
-        align-content: center;
         background-color: f.$bgcolor;
         height: f.rem(56);
 
@@ -195,10 +192,77 @@
                 margin-top: f.rem(10);
             }
 
+            #select-network {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                width: 180px;
+                height: 32px;
+                position: relative;
+                top: 13px;
+                left: 7px;
+                border-radius: 20px;
+                padding-left: 20px;
+                box-sizing: content-box;
+                background-color: #F4F7F8;
+                /*color: #726196;*/
+                color: #280d5f;
+                font-size: 0.9rem;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px -2px 0px inset;
+
+                &:hover {
+                    opacity: 0.5;
+                    transform: 0.2s;
+                    cursor: pointer;
+                }
+                
+                p {
+                    margin-left: 15px;
+                    font-weight: bold;
+                    flex: 1;
+                }
+
+                #bnb {
+                    width: 32px;
+                    height: 32px;
+                    position: absolute;
+                    left: -5px;
+                }
+
+                #network-down-arrow {
+                    margin-right: 10px;
+                }
+            }
+
+            #network-selection {
+                display: none;
+            }
+
             .connect {
                 position: relative;
                 margin-top: f.rem(8);
                 align-items: center;
+
+                button {
+                    appearance: none;
+                    border: none;
+                    width: 149.2px;
+                    height: 32px;
+                    border-radius: 15px;
+                    font-weight: bold;
+                    color: white;
+                    font-size: 0.9rem;
+                    background-color: #6CDAE2;
+                    box-shadow:0px 1.5px #68AAB7;
+                    position: relative;
+                    bottom: 4px;
+                }
+
+                button:hover {
+                    opacity: 0.6;
+                    transition: 0.3s;
+                    cursor: pointer;
+                }
             }
 
             .fee {
@@ -235,14 +299,13 @@
             padding-left: f.rem(1);
             width: f.rem(180);
             min-height: f.rem(32);
-            /*height: auto;*/
             height: 480px;
             border-radius: f.rem(8);
             margin-left: f.rem(-65);
 
             ul {
                 display: block;
-                overflow: auto; //overflow: scroll;
+                overflow: auto; 
                 justify-content: center;
                 letter-spacing: 0.03em;
                 opacity: f.rem(1);
