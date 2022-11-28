@@ -4,7 +4,50 @@
 }
 
 .ibrahim-pool-head {
-  background-color: #E7FCFF;
+  background-color: #E6FDFF;
+  padding: 20px;
+  text-indent: 18%;
+  font-weight: bolder;
+}
+
+.ibrahim-pool-head-text1 {
+  color: #7645D9;
+  font-size: 64px;
+  margin-bottom: 35px;
+}
+
+.ibrahim-pool-head-text2 {
+  color: #280D5F;
+  font-size: 20px;
+}
+
+.ibrahim-pool-head-text3 {
+  color: #280D5F;
+  font-size: 20px;
+}
+
+.ibrahim-pool-middle {
+  display: grid;
+  justify-content: center;
+  height: 951px;
+}
+
+.ibrahim-pool-middle-head {
+  display: grid;
+  align-items: center;
+  height: 100px;
+}
+
+.ibrahim-pool-middle-middle {
+  display: grid;
+  align-items: center;
+  height: 600px;
+}
+
+.ibrahim-pool-middle-foot {
+  display: grid;
+  align-items: center;
+  height: 250px;
 }
 
 /*# sourceMappingURL=pools.css.map */

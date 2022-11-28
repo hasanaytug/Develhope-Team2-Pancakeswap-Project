@@ -5,5 +5,58 @@
 }
 
 .ibrahim-pool-head {
-    background-color: #E7FCFF;
+    background-color: i.$ibrahim-pools-head-background-color;
+    padding: i.$ibrahim-pools-head-padding;
+    text-indent: 18%;
+    font-weight: bolder; // for now
+    // height: 200px;
 }
+
+.ibrahim-pool-head-text1 {
+    color: i.$ibrahim-pools-head-text1-color;
+    font-size: 64px;
+    // font-family: Kanit, sans-serif;
+    margin-bottom: 35px;
+}
+
+.ibrahim-pool-head-text2 {
+    color: i.$ibrahim-pools-head-texts-color;
+    font-size: 20px;
+}
+
+.ibrahim-pool-head-text3 {
+    color: i.$ibrahim-pools-head-texts-color;
+    font-size: 20px;
+}
+
+.ibrahim-pool-middle {
+    display: grid;
+    justify-content: center;
+    height: 951px;
+}
+
+.ibrahim-pool-middle-head {
+    display: grid;
+    align-items: center;
+    height: 100px;
+}
+
+.ibrahim-pool-middle-middle {
+    display: grid;
+    align-items: center;
+    height: 600px;
+}
+
+.ibrahim-pool-middle-foot {
+    display: grid;
+    align-items: center;
+    height: 250px;
+}
+
+// .material-symbols-outlined {
+//     font-variation-settings:
+//         'FILL' 0,
+//         'wght' 700,
+//         'GRAD' 0,
+//         'opsz' 48
+// }
