@@ -5,7 +5,7 @@
   align-items: center;
   position: relative;
   width: 100vw;
-  background-color: #5E34A5;
+  background-image: linear-gradient(#7B4CCE, #4E268D);
   height: 70px;
 }
 #phishing-warning div {
@@ -13,31 +13,39 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  background-color: #4F347E;
+  background-image: linear-gradient(#573C8B, #402869);
   height: 80%;
   width: 60%;
   flex-wrap: wrap;
-  gap: 0.5rem;
   border-radius: 15px;
   font-size: 0.9rem;
-  color: #82799D;
+  color: #A09EB1;
 }
 #phishing-warning div span {
   font-weight: bolder;
-  color: #E69F3F;
-  margin-left: 5px;
+  color: #FFB237;
+  margin-left: 10px;
+  margin-right: 5px;
   font-size: 0.8rem;
 }
 #phishing-warning div #url {
   color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  position: relative;
+  right: 5px;
+}
+#phishing-warning div #hyphen {
+  width: 20px;
+  height: 10px;
+  background-color: #A09EB1;
 }
 #phishing-warning #phishing-bunny {
   width: 92px;
   height: 121px;
-  overflow: hidden;
 }
 #phishing-warning button {
-  background-color: #5E34A5;
+  background-color: transparent;
   appearance: none;
   border: none;
   position: absolute;
