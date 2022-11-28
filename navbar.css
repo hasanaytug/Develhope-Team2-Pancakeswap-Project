@@ -144,6 +144,10 @@
   padding: 0.5rem;
   cursor: pointer;
 }
+.navbar .nav-right ul li img {
+  width: 24px;
+  height: 24px;
+}
 .navbar .nav-right ul li a {
   text-decoration: none;
 }
@@ -154,6 +158,52 @@
 .navbar .nav-right ul .selection {
   margin-top: 0.625rem;
 }
+.navbar .nav-right ul #select-network-wrapper {
+  height: 100%;
+}
+.navbar .nav-right ul #select-network-wrapper:hover {
+  cursor: pointer;
+  background-color: rgba(244, 247, 248, 0.2);
+}
+.navbar .nav-right ul #select-network-wrapper:hover #bnb {
+  opacity: 0.6;
+}
+.navbar .nav-right ul #select-network-wrapper:hover #network-selection {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 43px;
+  left: 0px;
+  border: 1px solid black;
+  background-color: white;
+  width: 280px;
+  height: 203px;
+  border-radius: 20px;
+  padding-top: 0;
+}
+.navbar .nav-right ul #select-network-wrapper:hover #network-selection li {
+  padding: 0;
+}
+.navbar .nav-right ul #select-network-wrapper:hover #network-selection li:first-child {
+  border-bottom: 1px solid grey;
+  height: 40px;
+  padding-top: 0px;
+  padding-left: 5px;
+}
+.navbar .nav-right ul #select-network-wrapper:hover #network-selection li:first-child *:hover {
+  cursor: text;
+}
+.navbar .nav-right ul #select-network-wrapper:hover #network-selection li:not(.navbar .nav-right ul #select-network-wrapper:hover #network-selection li:first-child) {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+.navbar .nav-right ul #select-network-wrapper:hover #select-network {
+  box-shadow: rgba(0, 0, 0, 0) 0px -2px 0px inset;
+}
 .navbar .nav-right ul #select-network {
   display: flex;
   flex-direction: row;
@@ -161,21 +211,15 @@
   width: 180px;
   height: 32px;
   position: relative;
-  top: 13px;
+  top: -3px;
   left: 7px;
   border-radius: 20px;
   padding-left: 20px;
   box-sizing: content-box;
-  background-color: #F4F7F8;
-  /*color: #726196;*/
+  background-color: rgb(244, 247, 248);
   color: #280d5f;
   font-size: 0.9rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px -2px 0px inset;
-}
-.navbar .nav-right ul #select-network:hover {
-  opacity: 0.5;
-  transition: 0.2s;
-  cursor: pointer;
 }
 .navbar .nav-right ul #select-network p {
   margin-left: 15px;
@@ -193,6 +237,7 @@
 }
 .navbar .nav-right ul #network-selection {
   display: none;
+  padding: 0;
 }
 .navbar .nav-right ul .connect {
   position: relative;
