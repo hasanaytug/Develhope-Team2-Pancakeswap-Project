@@ -24,11 +24,18 @@
 
 // border, radius and background-color properties become dominant against the click event. So click event of JS doesn't work for now, will be taken care later on.
 .ibrahim-button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 0.2rem;
+    span {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 0.2rem;
+
+        &:nth-child(2), &:last-child {
+            display: none;
+        }
+    }
+
     border-radius: 15px;
     font-size: 14px;
     letter-spacing: 1px;

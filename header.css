@@ -19,11 +19,6 @@
 }
 
 .ibrahim-button {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 0.2rem;
   border-radius: 15px;
   font-size: 14px;
   letter-spacing: 1px;
@@ -36,6 +31,16 @@
   box-shadow: rgba(14, 14, 44, 0.4) 0px -1px inset;
   z-index: 3;
   position: relative;
+}
+.ibrahim-button span {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+}
+.ibrahim-button span:nth-child(2), .ibrahim-button span:last-child {
+  display: none;
 }
 .ibrahim-button:hover {
   opacity: 0.6;
