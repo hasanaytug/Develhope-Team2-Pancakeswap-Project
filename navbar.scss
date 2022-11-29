@@ -34,26 +34,35 @@
             flex-direction: row;
             align-items: center;
             justify-content: space-around;
-            height: 100%;
+            gap: 1rem;
+            /*height: 100%;*/
 
             li.item>a {
                 color: #7a6eaa;
                 font-size: 0.9rem;
             }
 
-            li {
-                margin: 0.50rem;
-                padding: 0.70rem;
-
-                .logo {
-                    padding: 0;
-                    font-size: 100%;
-                }
+            li.item {
+                width: 64px;
+                height: 48px;
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: center;
+                align-items: center;
+                margin: 0;
+                position: relative;
             }
 
-            .item:hover .item .tem:hover {
+            li.logo {
+                padding: 0;
+                font-size: 100%;
+            }
+
+            .item:hover  {
+                /*
                 justify-content: center; ///here
                 align-items: center;
+                */
                 background-color: f.$hoverbg;
             }
 
@@ -65,10 +74,48 @@
         }
 
         //SUBMENUES IN ON THE LEFT EXEPT 
+        .item-wrapper, .dots-item-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 60px;
+        }
+
+        .item-wrapper:hover {
+            .submenu1 {
+                display: block;
+                position: absolute;
+                background: f.$bgcolor;
+                margin-top: f.$margtop;
+                width: f.$bg-widt;
+                border-radius: f.rem(16);
+                ul {
+                    display: block;
+                    li:hover {
+                        cursor: pointer;
+                        background: f.$hoverbg;
+                    }
+                }
+            }
+        }
+
         .submenu1 {
+            position: absolute;
+            top: 34px;
+            left: 10px;
+        }
+
+        .submenu5 {
+            position: absolute;
+            top: 36px;
+            left: 10px;
+        }
+
+        .submenu1, .submenu5 {
             display: none;
             margin-left: f.rem(-13);
             align-content: flex-start;
+
 
             ul {
                 li {
@@ -80,11 +127,15 @@
             }
         }
 
+        .submenu1 li, .submenu5 li {
+            margin: 0.5rem;
+            padding: 0.7rem;
+        }
+
         .sumenu1 .item:hover ul {
             display: block;
             background: f.$hoverbg;
             border-radius: 0.575rem;
-            position: absolute;
             padding-left: f.rem(1);
             z-index: 1000;
         }
@@ -100,26 +151,44 @@
 
             ul {
                 display: block;
-
                 li:hover {
                     cursor: pointer;
                     background: f.$hoverbg;
                 }
-
             }
-
-
         }
 
         // Three dots(Ellipsis) area
+        .dots-item-wrapper:hover {
+            .submenu5 {
+                display: block;
+                position: absolute;
+                background-color: f.$bgcolor;
+                margin-top: 1.06rem;
+                padding-left: f.rem(1);
+                width: f.$bg-widt;
+                border-radius: f.rem(20);
+    
+                ul {
+                    display: block;
+                    li:hover {
+                        cursor: pointer;
+                        background: f.$hoverbg;
+                    }
+                }
+            }
+        }
+
         .submenu5 {
             display: none;
             margin-left: f.rem(-13);
             z-index: 1;
-
-
             
             ul {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+
                 li {
                     display: flex;
                     flex-direction: row;
@@ -151,12 +220,10 @@
 
             ul {
                 display: block;
-
                 li:hover {
                     cursor: pointer;
                     background: f.$hoverbg;
                 }
-
             }
         }
 
@@ -263,8 +330,6 @@
                             justify-content: flex-start;
                             align-items: center;
                             gap: 1rem;
-
-
 
                             &:hover {
                                 background-color: #EFF4F5;

@@ -33,23 +33,32 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  height: 100%;
+  gap: 1rem;
+  /*height: 100%;*/
 }
 .navbar .nav-left ul li.item > a {
   color: #7a6eaa;
   font-size: 0.9rem;
 }
-.navbar .nav-left ul li {
-  margin: 0.5rem;
-  padding: 0.7rem;
+.navbar .nav-left ul li.item {
+  width: 64px;
+  height: 48px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  position: relative;
 }
-.navbar .nav-left ul li .logo {
+.navbar .nav-left ul li.logo {
   padding: 0;
   font-size: 100%;
 }
-.navbar .nav-left ul .item:hover .item .tem:hover {
-  justify-content: center;
+.navbar .nav-left ul .item:hover {
+  /*
+  justify-content: center; ///here
   align-items: center;
+  */
   background-color: rgb(192, 197, 192);
 }
 .navbar .nav-left ul li.item:hover {
@@ -57,20 +66,54 @@
   /*background-color: f.$hoverbg;*/
   border-radius: 0.625rem;
 }
+.navbar .nav-left .item-wrapper, .navbar .nav-left .dots-item-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 60px;
+}
+.navbar .nav-left .item-wrapper:hover .submenu1 {
+  display: block;
+  position: absolute;
+  background: #fff;
+  margin-top: 1.2rem;
+  width: 20rem;
+  border-radius: 1rem;
+}
+.navbar .nav-left .item-wrapper:hover .submenu1 ul {
+  display: block;
+}
+.navbar .nav-left .item-wrapper:hover .submenu1 ul li:hover {
+  cursor: pointer;
+  background: rgb(192, 197, 192);
+}
 .navbar .nav-left .submenu1 {
+  position: absolute;
+  top: 34px;
+  left: 10px;
+}
+.navbar .nav-left .submenu5 {
+  position: absolute;
+  top: 36px;
+  left: 10px;
+}
+.navbar .nav-left .submenu1, .navbar .nav-left .submenu5 {
   display: none;
   margin-left: -0.8125rem;
   align-content: flex-start;
 }
-.navbar .nav-left .submenu1 ul li a {
+.navbar .nav-left .submenu1 ul li a, .navbar .nav-left .submenu5 ul li a {
   color: #7a6eaa;
   font-size: 1rem;
+}
+.navbar .nav-left .submenu1 li, .navbar .nav-left .submenu5 li {
+  margin: 0.5rem;
+  padding: 0.7rem;
 }
 .navbar .nav-left .sumenu1 .item:hover ul {
   display: block;
   background: rgb(192, 197, 192);
   border-radius: 0.575rem;
-  position: absolute;
   padding-left: 0.0625rem;
   z-index: 1000;
 }
@@ -92,10 +135,31 @@
   cursor: pointer;
   background: rgb(192, 197, 192);
 }
+.navbar .nav-left .dots-item-wrapper:hover .submenu5 {
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  margin-top: 1.06rem;
+  padding-left: 0.0625rem;
+  width: 20rem;
+  border-radius: 1.25rem;
+}
+.navbar .nav-left .dots-item-wrapper:hover .submenu5 ul {
+  display: block;
+}
+.navbar .nav-left .dots-item-wrapper:hover .submenu5 ul li:hover {
+  cursor: pointer;
+  background: rgb(192, 197, 192);
+}
 .navbar .nav-left .submenu5 {
   display: none;
   margin-left: -0.8125rem;
   z-index: 1;
+}
+.navbar .nav-left .submenu5 ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 .navbar .nav-left .submenu5 ul li {
   display: flex;
