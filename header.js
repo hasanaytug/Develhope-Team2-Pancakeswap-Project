@@ -1,6 +1,9 @@
 const swipperBullets = document.querySelectorAll('.header-swipper');
 const active = 'header-bullet-active';
 const headerButton = document.querySelector('.ibrahim-button');
+const buttonChildren = Array.from(headerButton.querySelectorAll('span'));
+const headerBox = document.querySelector('.ibrahim-rectangle');
+const headerBoxImages = Array.from(headerBox.querySelectorAll('.header-box-imgs'));
 
 swipperBullets.forEach((bullet) => bullet.addEventListener('click', () => {
     if (!bullet.hasAttribute('id')) {
@@ -8,13 +11,19 @@ swipperBullets.forEach((bullet) => bullet.addEventListener('click', () => {
         bullet.setAttribute('id', active);
 
         let selectedBullet = Array.from(swipperBullets).indexOf(bullet);
-        buttonContent = Array.from(headerButton.querySelectorAll('span'));
 
-        if (selectedBullet >= 0 && selectedBullet < buttonContent.length)
-            buttonContent[selectedBullet].style.display = 'flex';
+        if (selectedBullet >= 0 && selectedBullet < buttonChildren.length) {
+            buttonChildren[selectedBullet].style.display = 'flex';
+            headerBoxImages[selectedBullet].style.display = 'flex';            
+        }
 
-        buttonContent.map(el => {
-            if (buttonContent.indexOf(el) !== selectedBullet)
+        buttonChildren.map(el => {
+            if (buttonChildren.indexOf(el) !== selectedBullet)
+                el.style.display = 'none';
+        });
+
+        headerBoxImages.map(el => {
+            if (headerBoxImages.indexOf(el) !== selectedBullet)
                 el.style.display = 'none';
         });
         

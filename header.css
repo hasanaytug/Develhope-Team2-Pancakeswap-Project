@@ -49,10 +49,29 @@
 }
 
 #header-aptos-img {
+  display: initial;
   position: absolute;
   top: -36px;
   right: 0px;
   z-index: 2;
+}
+
+#header-perpetual-img {
+  display: none;
+  position: absolute;
+  top: -41px;
+  right: 0px;
+  width: 392px;
+  height: 236px;
+}
+
+#header-lottery-img {
+  display: none;
+  position: absolute;
+  width: 1105px;
+  height: 222px;
+  top: -24px;
+  right: -6px;
 }
 
 /* Header pagination swappers*/
