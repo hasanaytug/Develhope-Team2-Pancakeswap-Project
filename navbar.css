@@ -11,6 +11,7 @@
 
 .navbar {
   position: fixed;
+  z-index: 5;
   top: 70px;
   display: flex;
   justify-content: space-between;

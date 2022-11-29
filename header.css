@@ -34,6 +34,8 @@
   background-color: #1fc7d4;
   color: #fff;
   box-shadow: rgba(14, 14, 44, 0.4) 0px -1px inset;
+  z-index: 3;
+  position: relative;
 }
 .ibrahim-button:hover {
   opacity: 0.6;
@@ -41,37 +43,39 @@
   transition: 0.3s;
 }
 
-#header-swipper-bullet-1, #header-swipper-bullet-2, #header-swipper-bullet-3 {
-  display: inline-block;
-  width: 36px;
-  height: 8px;
+#header-aptos-img {
+  position: absolute;
+  top: -36px;
+  right: 0px;
+  z-index: 2;
 }
 
+/* Header pagination swappers*/
 #header-swipper-container {
   display: flex;
   flex-direction: row;
   align-self: center;
 }
 
+#header-bullet-active {
+  opacity: 1;
+}
+
 .header-swipper {
+  width: 36px;
+  height: 8px;
+  opacity: 0.2;
+  z-index: 2;
   background-color: white;
-}
-.header-swipper:nth-child(2) {
-  opacity: 0.2;
-}
-.header-swipper:last-child {
-  opacity: 0.2;
 }
 .header-swipper:hover {
   cursor: pointer;
 }
-
-#header-swipper-bullet-1 {
+.header-swipper:first-child {
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
 }
-
-#header-swipper-bullet-3 {
+.header-swipper:last-child {
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
 }
@@ -85,6 +89,8 @@
 }
 
 .ibrahim-rectangle {
+  position: relative;
+  top: 50px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
