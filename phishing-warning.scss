@@ -3,7 +3,9 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    position: relative;
+    position: fixed;
+    top: 0;
+
     width: 100vw;
     background-image: linear-gradient(#7B4CCE, #4E268D);
     height: 70px;
