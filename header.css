@@ -1,3 +1,5 @@
+/* INFOS variables */
+/* end of INFOS variables */
 /* this debug is for test */
 .ibrahim-full-background > div:not(.ibrahim-foot) {
   color: white;
@@ -17,14 +19,61 @@
 }
 
 .ibrahim-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
   border-radius: 15px;
-  font-size: 16px;
+  font-size: 14px;
+  letter-spacing: 1px;
   height: 45px;
   width: 195px;
   text-align: center;
   border: none;
   background-color: #1fc7d4;
   color: #fff;
+  box-shadow: rgba(14, 14, 44, 0.4) 0px -1px inset;
+}
+.ibrahim-button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#header-swipper-bullet-1, #header-swipper-bullet-2, #header-swipper-bullet-3 {
+  display: inline-block;
+  width: 36px;
+  height: 8px;
+}
+
+#header-swipper-container {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+}
+
+.header-swipper {
+  background-color: white;
+}
+.header-swipper:nth-child(2) {
+  opacity: 0.2;
+}
+.header-swipper:last-child {
+  opacity: 0.2;
+}
+.header-swipper:hover {
+  cursor: pointer;
+}
+
+#header-swipper-bullet-1 {
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+#header-swipper-bullet-3 {
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .ibrahim-head {
@@ -32,11 +81,14 @@
   justify-content: center;
   align-items: center;
   /* will be calculated as % later */
-  height: 350px;
+  height: 450px;
 }
 
 .ibrahim-rectangle {
-  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 35px;
   height: 195px;
   width: 1150px;
   padding: 25px;
@@ -48,14 +100,7 @@
 }
 
 #headTag {
-  font-size: larger;
-}
-
-.material-icons {
-  font-size: 18px;
-  display: inline-block;
-  justify-content: center;
-  align-items: center;
+  font-size: 1rem;
 }
 
 .ibrahim-middle {

@@ -24,22 +24,75 @@
 
 // border, radius and background-color properties become dominant against the click event. So click event of JS doesn't work for now, will be taken care later on.
 .ibrahim-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
     border-radius: 15px;
-    font-size: 16px;
+    font-size: 14px;
+    letter-spacing: 1px;
     height: 45px;
     width: 195px;
     text-align: center;
     border: none;
     background-color: #1fc7d4;
     color: #fff;
+    box-shadow: rgba(14, 14, 44, 0.4) 0px -1px inset;
+
+    &:hover {
+        opacity: 0.6;
+        cursor: pointer;
+        transition: 0.3s;
+    }
 }
+
+#header-swipper-bullet-1, #header-swipper-bullet-2, #header-swipper-bullet-3 {
+    display: inline-block;
+    width: 36px;
+    height: 8px;
+}
+
+#header-swipper-container {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+}
+
+.header-swipper {
+    background-color: white;
+
+
+    &:nth-child(2) {
+        opacity: 0.2;
+    }
+
+    &:last-child {
+        opacity: 0.2;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+#header-swipper-bullet-1 {
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+#header-swipper-bullet-3 {
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
 
 .ibrahim-head {
     display: flex;
     justify-content: center; // horizontally
     align-items: center; // vertically
     /* will be calculated as % later */
-    height: 350px;
+    height: 450px;
     // background-color: #007aff;
 }
 
@@ -47,7 +100,10 @@
 // transition-duration: 0ms;
 
 .ibrahim-rectangle {
-    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 35px;
     height: 195px;
     width: 1150px;
     padding: 25px;
@@ -65,15 +121,9 @@
 
 #headTag {
     // font-family: Kanit; // here didn't work, take a look at "Google Fonts".
-    font-size: larger;
+    font-size: 1rem;
 }
 
-.material-icons {
-    font-size: 18px;
-    display: inline-block;
-    justify-content: center;
-    align-items: center;
-}
 
 .ibrahim-middle {
     /* will be calculated as % later */
