@@ -1,5 +1,13 @@
 const arrayFromNodeList = (arr) => Array.from(arr);
 
+const hideUnselectedElements = (itemsArr, selected) => {
+    return itemsArr.map(el => {
+        if (itemsArr.indexOf(el) !== selected)
+            el.style.display = 'none';
+    });
+}
+
+
 const swipperBullets = document.querySelectorAll('.header-swipper');
 const active = 'header-bullet-active';
 
@@ -16,6 +24,7 @@ const headerBoxTagChildrenArr = arrayFromNodeList(headerBoxTagChildren);
 
 const headerBoxContainer = document.querySelector('.ibrahim-rectangle');
 
+const headerHeadElements = arrayFromNodeList(document.querySelectorAll('.header-head-el'));
 
 swipperBullets.forEach((bullet) => bullet.addEventListener('click', () => {
     if (!bullet.hasAttribute('id')) {
@@ -28,17 +37,14 @@ swipperBullets.forEach((bullet) => bullet.addEventListener('click', () => {
             buttonChildren[selectedBullet].style.display = 'flex';
             headerBoxImages[selectedBullet].style.display = 'flex'; 
             headerBoxTagChildren[selectedBullet].style.display = 'flex';
+            headerHeadElements[selectedBullet].style.display = 'flex';
 
-            /*
-            selectedBullet === 0 
-                ? headerBoxContainer.style.background 
-                = 'linear-gradient(rgb(0, 191, 165) 0%, rgb(0, 90, 90) 100%);'
-                : 'linear-gradient(rgb(115, 67, 211) 0%, rgb(72, 44, 128) 100%);';
-            */
             if (selectedBullet === 0)
-                headerBoxContainer.style.background = 'linear-gradient(rgb(0, 191, 165) 0%, rgb(0, 90, 90) 100%)';
+                headerBoxContainer.style.background = 
+                    'linear-gradient(rgb(0, 191, 165) 0%, rgb(0, 90, 90) 100%)';
             else
-                headerBoxContainer.style.background = 'linear-gradient(rgb(115, 67, 211) 0%, rgb(72, 44, 128) 100%)';
+                headerBoxContainer.style.background = 
+                    'linear-gradient(rgb(115, 67, 211) 0%, rgb(72, 44, 128) 100%)';
 
             console.log(headerBoxContainer.style.background);
         }
@@ -46,6 +52,7 @@ swipperBullets.forEach((bullet) => bullet.addEventListener('click', () => {
         hideUnselectedElements(buttonChildren, selectedBullet);
         hideUnselectedElements(headerBoxImages, selectedBullet);
         hideUnselectedElements(headerBoxTagChildrenArr, selectedBullet);
+        hideUnselectedElements(headerHeadElements, selectedBullet);
 
 
         
@@ -53,10 +60,5 @@ swipperBullets.forEach((bullet) => bullet.addEventListener('click', () => {
 }));
 
 
-const hideUnselectedElements = (itemsArr, selected) => {
-    return itemsArr.map(el => {
-        if (itemsArr.indexOf(el) !== selected)
-            el.style.display = 'none';
-    });
-}
+
 
