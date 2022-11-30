@@ -17,19 +17,23 @@ const headerBoxTagChildrenArr = arrayFromNodeList(headerBoxTagChildren);
 const headerBoxContainer = document.querySelector('.ibrahim-rectangle');
 const headerHeadElements = arrayFromNodeList(document.querySelectorAll('.header-head-el'));
 let selectedBullet = 0;
-let previousSelectedBullet;
+let previousBullet = 0;
 
-const swipeTime = 6000;
+const swipeTime = 1500;
 let swipperTimerId = setInterval(() => {
-    previousSelectedBullet = selectedBullet;
-    toggleTimer(++selectedBullet % 3, swipperBullets)
+
+
+    previousBullet = selectedBullet;
+    toggleTimer(++selectedBullet % 3, swipperBullets);
+    console.log(`previous: ${previousBullet % 3} - current: ${selectedBullet % 3}`);
+
 }, swipeTime);
 swipperBullets.forEach((bullet) => {
     bullet.addEventListener('click', () => {
         clearInterval(swipperTimerId);
-        selectedBullet = previousSelectedBullet;
-        swipperTimerId = setInterval(() => toggleTimer(++selectedBullet % 3, swipperBullets), swipeTime);
+        previousBullet = ++selectedBullet;
 
+        swipperTimerId = setInterval(() => toggleTimer(++selectedBullet % 3, swipperBullets), swipeTime);
         if (!bullet.hasAttribute('id')) {
             document.querySelector(`#${active}`).removeAttribute('id');
             
