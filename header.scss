@@ -24,6 +24,9 @@
 
 // border, radius and background-color properties become dominant against the click event. So click event of JS doesn't work for now, will be taken care later on.
 .ibrahim-button {
+    position: relative;
+    top: 5px;
+
     span {
         display: flex;
         flex-direction: row;
@@ -55,6 +58,51 @@
         transition: 0.3s;
     }
 }
+
+/*Header box tags*/
+#headTag {
+    & h1 {
+        display: none;
+    }
+
+    & h1:first-child {
+        display: flex;
+    }
+
+    #header-counter {
+        position: relative;
+        bottom: 5px;
+        border-radius: 7px;
+        width: 200px;
+        height: 40px;
+        padding-left: 4px;
+        padding-top: 4px;
+
+        display: none;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 1.8rem;
+        font-weight: bold;
+
+        background-image: linear-gradient(#3b1e77, #49258f);
+
+        span {
+            color: #fec317;
+            sub {
+                position: relative;
+                bottom: 6px;
+                font-size: 1rem;
+                margin-left: 3px;
+            }
+        }
+    }
+
+}
+
+
+/* Header box images */
 
 #header-aptos-img {
     display: initial;
@@ -143,8 +191,7 @@
     // background-repeat: no-repeat;
     // background-position: right top;
     // background-attachment: fixed;
-    background: linear-gradient(rgb(0, 191, 165) 0%, rgb(0, 90, 90) 100%) ; // will be worked on here about background color and image to combine in 1 rectangle
-    // background: linear-gradient(rgb(115, 67, 211) 0%, rgb(72, 44, 128) 100%);
+    background-image: linear-gradient(rgb(0, 191, 165) 0%, rgb(0, 90, 90) 100%);;
 }
 
 .ibrahim-head-margin {

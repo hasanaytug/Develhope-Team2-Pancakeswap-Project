@@ -19,6 +19,8 @@
 }
 
 .ibrahim-button {
+  position: relative;
+  top: 5px;
   border-radius: 15px;
   font-size: 14px;
   letter-spacing: 1px;
@@ -48,6 +50,41 @@
   transition: 0.3s;
 }
 
+/*Header box tags*/
+#headTag h1 {
+  display: none;
+}
+#headTag h1:first-child {
+  display: flex;
+}
+#headTag #header-counter {
+  position: relative;
+  bottom: 5px;
+  border-radius: 7px;
+  width: 200px;
+  height: 40px;
+  padding-left: 4px;
+  padding-top: 4px;
+  display: none;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  background-image: linear-gradient(#3b1e77, #49258f);
+}
+#headTag #header-counter span {
+  color: #fec317;
+}
+#headTag #header-counter span sub {
+  position: relative;
+  bottom: 6px;
+  font-size: 1rem;
+  margin-left: 3px;
+}
+
+/* Header box images */
 #header-aptos-img {
   display: initial;
   position: absolute;
@@ -122,7 +159,7 @@
   height: 195px;
   width: 1150px;
   padding: 25px;
-  background: linear-gradient(rgb(0, 191, 165) 0%, rgb(0, 90, 90) 100%);
+  background-image: linear-gradient(rgb(0, 191, 165) 0%, rgb(0, 90, 90) 100%);
 }
 
 .ibrahim-head-margin {
