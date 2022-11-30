@@ -1,6 +1,5 @@
 const arrayFromNodeList = (arr) => Array.from(arr);
 
-
 const swipperBullets = document.querySelectorAll('.header-swipper');
 const active = 'header-bullet-active';
 
@@ -15,16 +14,20 @@ const headerBoxImages =
 const headerBoxTagChildren = document.querySelectorAll('#headTag h1, #header-counter');
 const headerBoxTagChildrenArr = arrayFromNodeList(headerBoxTagChildren);
 
-
 const headerBoxContainer = document.querySelector('.ibrahim-rectangle');
 const headerHeadElements = arrayFromNodeList(document.querySelectorAll('.header-head-el'));
 let selectedBullet = 0;
+let previousSelectedBullet;
 
-const swipeTime = 5000;
-let swipperTimerId = setInterval(() => toggleTimer(++selectedBullet % 3, swipperBullets), swipeTime);
+const swipeTime = 6000;
+let swipperTimerId = setInterval(() => {
+    previousSelectedBullet = selectedBullet;
+    toggleTimer(++selectedBullet % 3, swipperBullets)
+}, swipeTime);
 swipperBullets.forEach((bullet) => {
     bullet.addEventListener('click', () => {
         clearInterval(swipperTimerId);
+        selectedBullet = previousSelectedBullet;
         swipperTimerId = setInterval(() => toggleTimer(++selectedBullet % 3, swipperBullets), swipeTime);
 
         if (!bullet.hasAttribute('id')) {
@@ -36,7 +39,6 @@ swipperBullets.forEach((bullet) => {
         }
     });
 });
-
 
 /* functions */
 const hideUnselectedElements = (itemsArr, selected) => {
@@ -71,5 +73,4 @@ const toggleTimer = (selected, bullets) => {
     toggleHeaderBoxElements(selected);
     bullets[selected === 0 ? 2 : selected - 1].removeAttribute('id');
     bullets[selected].setAttribute('id', `${active}`);
-    console.log(selected);
 }
