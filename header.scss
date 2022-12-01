@@ -4,13 +4,13 @@
     // border: 1px solid i.$ibrahim-debug-color;
 }
 
-.ibrahim-full-background > div:not(.ibrahim-foot) { // we need to talk about ">" sign and child parent relationships for these operations.
-    color: white; // for a while
+.ibrahim-full-background > div:not(.ibrahim-foot) {
+    color: white; 
 }
 
 .ibrahim-full-background {
     height: 1800px;
-    font-family: Arial, Helvetica, sans-serif; // looks like similar to "Kanit, sans-serif"
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .headMiddleBackgroundColor {
@@ -22,7 +22,6 @@
     margin-top: 25px;
 }
 
-// border, radius and background-color properties become dominant against the click event. So click event of JS doesn't work for now, will be taken care later on.
 .ibrahim-button {
     position: relative;
     top: 5px;
@@ -219,7 +218,7 @@
     height: 600px;
     // background-color: blue;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -231,24 +230,79 @@
 .ibrahim-middle-right {
     height: 700px;
     width: auto;
+    background-color: #EEF4FF;
+    
+    position: relative;
+
+    /*
+    img {
+        width: 574px;
+        background-color: white;
+        position: absolute;
+        left: 20px;
+        z-index: 2;
+        top: -5px;
+        animation: 3s ease-in-out 1s infinite normal none running spaceman-floating;
+    }
+    */
+}
+
+#header-spaceman-container {
+    position: absolute;
+    /*left: 20px;*/
+    z-index: 3;
+    /*top: -5px;*/
+    width: 574px;
+    height: 574px;
+    background: transparent rgba(255, 255, 255, 0) no-repeat center;
+    img {
+        width: 574px;
+        position: absolute;
+        left: 20px;
+        z-index: 2;
+        top: -5px;
+        animation: 3s ease-in-out 1s infinite normal none running spaceman-floating;
+    }
+}
+
+@keyframes spaceman-floating {
+    0% {
+      transform: translate(0px, 0px);
+    }
+    
+    50% {
+      transform: translate(5px, 10px);
+    }
+    
+    100% {
+      transform: translate(0px, 0px);
+    }
+    }
+
+.header-middle-tag, .header-middle-button {
+    position: relative;
+    left: 120px;
+    z-index: 3;
 }
 
 #middleH1Tag {
-    font-size: 70px;
+    font-size: 60px;
     line-height: 75px;
     color: #7645d9;
 }
 
 #middleH6Tag {
-    font-size: 22px;
+    font-size: 20px;
     line-height: 25px;
     color: #280d5f;
 }
 
+
+
 #buttonRightMargin {
     margin-right: 6px;
     border-radius: 15px;
-    font-size: 16px;
+    font-size: 15px;
     height: 45px;
     width: 160px;
     text-align: center;
@@ -256,18 +310,38 @@
     background-color: #1fc7d4;
     color: #fff;
     box-shadow: 0px 0.5px black;
+    appearance: none;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.6;
+        transition: 0.3s;
+    }
 }
 
 #buttonSecondMiddle {
     border-radius: 15px;
-    font-size: 16px;
+    font-size: 15px;
     height: 45px;
     width: 130px;
     text-align: center;
     border: 2px solid #1fc7d4;
-    // border-color: #1fc7d4;
-    // background-color: #1fc7d4;
+    appearance: none;
+    background-color: #EEF4FF;
     color: #1fc7d4;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.6;
+        transition: 0.3s;
+    }
+}
+
+
+#header-middle-border {
+    position: absolute;
+    bottom: -335px;
+    z-index: 1;
 }
 
 .ibrahim-foot {

@@ -278,20 +278,16 @@ body {
 }
 
 #lott-ball-1 {
-  top: 0%;
-  bottom: 50%;
-  left: 60%;
-  right: 10px;
+  top: 0px;
+  right: 0px;
   width: 512px;
-  border: 1px solid yellow;
-  overflow: hidden;
   animation: 3s ease-in-out 1s infinite normal none running lott-ball-anim-1;
   z-index: 1;
 }
 
 #lott-ball-2 {
   right: 0px;
-  top: 2%;
+  top: 0px;
   width: 510px;
   z-index: 2;
   animation: 3s ease-in-out 2s infinite normal none running lott-ball-anim-2;

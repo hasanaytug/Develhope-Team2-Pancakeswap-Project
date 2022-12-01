@@ -185,7 +185,7 @@
   /* will be calculated as % later */
   height: 600px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -197,16 +197,64 @@
 .ibrahim-middle-right {
   height: 700px;
   width: auto;
+  background-color: #EEF4FF;
+  position: relative;
+  /*
+  img {
+      width: 574px;
+      background-color: white;
+      position: absolute;
+      left: 20px;
+      z-index: 2;
+      top: -5px;
+      animation: 3s ease-in-out 1s infinite normal none running spaceman-floating;
+  }
+  */
+}
+
+#header-spaceman-container {
+  position: absolute;
+  /*left: 20px;*/
+  z-index: 3;
+  /*top: -5px;*/
+  width: 574px;
+  height: 574px;
+  background: transparent rgba(255, 255, 255, 0) no-repeat center;
+}
+#header-spaceman-container img {
+  width: 574px;
+  position: absolute;
+  left: 20px;
+  z-index: 2;
+  top: -5px;
+  animation: 3s ease-in-out 1s infinite normal none running spaceman-floating;
+}
+
+@keyframes spaceman-floating {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(5px, 10px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+.header-middle-tag, .header-middle-button {
+  position: relative;
+  left: 120px;
+  z-index: 3;
 }
 
 #middleH1Tag {
-  font-size: 70px;
+  font-size: 60px;
   line-height: 75px;
   color: #7645d9;
 }
 
 #middleH6Tag {
-  font-size: 22px;
+  font-size: 20px;
   line-height: 25px;
   color: #280d5f;
 }
@@ -214,7 +262,7 @@
 #buttonRightMargin {
   margin-right: 6px;
   border-radius: 15px;
-  font-size: 16px;
+  font-size: 15px;
   height: 45px;
   width: 160px;
   text-align: center;
@@ -222,16 +270,35 @@
   background-color: #1fc7d4;
   color: #fff;
   box-shadow: 0px 0.5px black;
+  appearance: none;
+}
+#buttonRightMargin:hover {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: 0.3s;
 }
 
 #buttonSecondMiddle {
   border-radius: 15px;
-  font-size: 16px;
+  font-size: 15px;
   height: 45px;
   width: 130px;
   text-align: center;
   border: 2px solid #1fc7d4;
+  appearance: none;
+  background-color: #EEF4FF;
   color: #1fc7d4;
+}
+#buttonSecondMiddle:hover {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+#header-middle-border {
+  position: absolute;
+  bottom: -335px;
+  z-index: 1;
 }
 
 .ibrahim-foot {
