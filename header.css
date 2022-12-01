@@ -212,6 +212,10 @@
   */
 }
 
+#ps-logo-icon {
+  z-index: 1;
+}
+
 #header-spaceman-container {
   position: absolute;
   /*left: 20px;*/
@@ -219,15 +223,14 @@
   /*top: -5px;*/
   width: 574px;
   height: 574px;
-  background: transparent rgba(255, 255, 255, 0) no-repeat center;
+  background: transparent no-repeat center;
+  top: -5px;
+  left: 54px;
+  z-index: 2;
 }
 #header-spaceman-container img {
   width: 574px;
-  position: absolute;
-  left: 20px;
-  z-index: 2;
-  top: -5px;
-  animation: 3s ease-in-out 1s infinite normal none running spaceman-floating;
+  animation: 3s ease-in-out 2s infinite normal none running spaceman-floating;
 }
 
 @keyframes spaceman-floating {
@@ -337,7 +340,8 @@
 .flexBox {
   width: 910px;
   height: 320px;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   justify-content: space-evenly;
 }
 
@@ -362,12 +366,17 @@
   font-weight: bolder;
   line-height: 10px;
   color: #280d5f;
+  z-index: 1;
 }
 
 .footTexts {
   margin-top: 10px;
   font-size: 15px;
   color: #7a6eaa;
+}
+.footTexts h3:nth-child(1), .footTexts h3:nth-child(2) {
+  color: #988EBE;
+  font-weight: normal;
 }
 
 #joinText {

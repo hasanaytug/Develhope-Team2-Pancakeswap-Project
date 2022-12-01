@@ -21,6 +21,11 @@ let previousBullet = 0;
 
 const swipeTime = 5000;
 let swipperTimerId = setInterval(() => {
+    if (selectedBullet > 2) {
+        selectedBullet = 0;
+        previousBullet = 0;
+    }
+
     previousBullet = selectedBullet;
     toggleTimer(++selectedBullet % 3, swipperBullets);
 }, swipeTime);

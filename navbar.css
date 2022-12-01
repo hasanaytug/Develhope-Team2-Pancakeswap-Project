@@ -25,8 +25,7 @@
   background-color: #fff;
   height: 3.5rem;
   border-bottom: 1px solid #E7E3EB;
-  transition: all ease-in-out 0.2s;
-  transition-delay: 0.1s;
+  transition: ease-in 0.2s;
 }
 .navbar .nav-left {
   display: flex;
