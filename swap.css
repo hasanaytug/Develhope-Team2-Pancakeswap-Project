@@ -1,0 +1,62 @@
+body {
+  background-color: rgb(239, 244, 255);
+}
+
+.legend {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  z-index: 1;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 300;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 19%;
+  padding-right: 19%;
+  margin-top: 20px;
+}
+
+.graph {
+  width: 720px;
+  height: 300px;
+  background-color: rgb(245, 252, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.1);
+}
+
+.top {
+  width: 700px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.top-left {
+  display: flex;
+}
+
+.middle {
+  width: 700px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.calculator {
+  width: 200px;
+  height: 300px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.1);
+}
+
+.coin-rate {
+  font-size: 1.5rem;
+}
