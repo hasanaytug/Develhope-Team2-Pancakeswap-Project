@@ -29,7 +29,7 @@
 .ibrahim-pool-middle {
   display: grid;
   justify-content: center;
-  height: 951px;
+  height: 851px;
 }
 
 .ibrahim-pool-middle-head {
@@ -42,9 +42,24 @@
 }
 
 .ibrahim-pool-middle-middle {
-  display: grid;
+  height: 500px;
+  border: 1px solid #ddd;
+  border-radius: 24px;
+}
+.ibrahim-pool-middle-middle div {
+  display: flex;
   align-items: center;
-  height: 600px;
+  margin-left: 3.5%;
+  height: 16%;
+  border-bottom: 1px solid #ddd;
+}
+.ibrahim-pool-middle-middle div ul li {
+  float: left;
+  list-style-type: none;
+  padding-right: 110px;
+}
+.ibrahim-pool-middle-middle div ul div {
+  display: grid;
 }
 
 .ibrahim-pool-middle-foot {
@@ -291,23 +306,6 @@ form.example::after {
 .ibrahim-pool-middle-head-right {
   display: flex;
   padding: 10px;
-}
-
-table,
-td,
-th {
-  border: 1px solid #ddd;
-  text-align: left;
-}
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-th,
-td {
-  padding: 15px;
 }
 
 /*# sourceMappingURL=pools.css.map */

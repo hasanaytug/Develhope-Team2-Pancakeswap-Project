@@ -32,7 +32,7 @@
 .ibrahim-pool-middle {
     display: grid;
     justify-content: center;
-    height: 951px;
+    height: 851px;
 }
 
 .ibrahim-pool-middle-head {
@@ -45,9 +45,31 @@
 }
 
 .ibrahim-pool-middle-middle {
-    display: grid;
-    align-items: center;
-    height: 600px;
+    height: 500px;
+    border: 1px solid #ddd;
+    border-radius: 24px;
+    // text-align: center;
+    div {
+        display: flex;
+        align-items: center;
+        margin-left: 3.5%;
+        height: 16%;
+        border-bottom: 1px solid #ddd;
+        ul  {
+            // display: flex;
+            // height: 50%;
+            li {
+                // display: flex;
+                float: left;
+                list-style-type: none;
+                padding-right: 110px;
+                // padding: 20px
+            }
+            div {
+                display: grid;
+            }
+        }
+    }
 }
 
 .ibrahim-pool-middle-foot {
@@ -305,19 +327,46 @@ form.example::after {
 
 // table
 
-table,
-td,
-th {
-    border: 1px solid #ddd;
-    text-align: left;
-}
 
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
 
-th,
-td {
-    padding: 15px;
-}
+// First Way 
+
+// #myTable {
+//     width: 100%;
+//     border-collapse: collapse;
+//     border: 1px solid #ddd;
+//     font-size: 18px;
+//     border-radius: 15px;
+// }
+
+// #myTable td {
+//     text-align: left;
+//     padding: 12px;
+// }
+
+// #myTable tr {
+//     border-bottom: 1px solid #ddd;
+// }
+
+// #myTable tr:hover {
+//     background-color: #f1f1f1;
+// }
+
+// Second Way 
+
+// table {
+//     border: 1px solid #ddd;
+//     // border-collapse: collapse;
+//     border-radius: 24px;
+//     margin-left: 25px;
+//     width: 95%;
+// }
+
+// tr {
+//     border: 1px solid #ddd;
+//     text-align: left;
+// }
+
+// td {
+//     padding: 15px;
+// }
