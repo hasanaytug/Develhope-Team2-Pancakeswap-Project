@@ -1,3 +1,7 @@
+.hide-onscroll-warning {
+  top: -100px !important;
+}
+
 #phishing-warning {
   display: flex;
   flex-direction: row;

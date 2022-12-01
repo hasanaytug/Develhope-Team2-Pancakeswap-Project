@@ -9,8 +9,8 @@
   list-style: none;
 }
 
-.hide-onscroll {
-  top: -100px !important;
+.hide-onscroll-navbar {
+  top: -65px !important;
 }
 
 .navbar {
