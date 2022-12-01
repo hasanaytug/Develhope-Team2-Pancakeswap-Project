@@ -9,6 +9,8 @@
   width: 100vw;
   background-image: linear-gradient(#7B4CCE, #4E268D);
   height: 70px;
+  transition: all ease-in-out 0.2s;
+  transition-delay: 0.1s;
 }
 #phishing-warning div {
   display: flex;

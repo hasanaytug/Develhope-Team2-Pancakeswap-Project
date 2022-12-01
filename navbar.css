@@ -9,6 +9,10 @@
   list-style: none;
 }
 
+.hide-onscroll {
+  top: -100px !important;
+}
+
 .navbar {
   position: fixed;
   z-index: 5;
@@ -21,6 +25,8 @@
   background-color: #fff;
   height: 3.5rem;
   border-bottom: 1px solid #E7E3EB;
+  transition: all ease-in-out 0.2s;
+  transition-delay: 0.1s;
 }
 .navbar .nav-left {
   display: flex;

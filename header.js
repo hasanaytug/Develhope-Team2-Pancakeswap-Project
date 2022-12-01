@@ -19,15 +19,12 @@ const headerHeadElements = arrayFromNodeList(document.querySelectorAll('.header-
 let selectedBullet = 0;
 let previousBullet = 0;
 
-const swipeTime = 1500;
+const swipeTime = 5000;
 let swipperTimerId = setInterval(() => {
-
-
     previousBullet = selectedBullet;
     toggleTimer(++selectedBullet % 3, swipperBullets);
-    console.log(`previous: ${previousBullet % 3} - current: ${selectedBullet % 3}`);
-
 }, swipeTime);
+
 swipperBullets.forEach((bullet) => {
     bullet.addEventListener('click', () => {
         clearInterval(swipperTimerId);
