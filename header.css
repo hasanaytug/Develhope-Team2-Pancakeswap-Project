@@ -219,14 +219,13 @@
 #header-spaceman-container {
   position: absolute;
   /*left: 20px;*/
-  z-index: 3;
+  z-index: 4;
   /*top: -5px;*/
   width: 574px;
   height: 574px;
   background: transparent no-repeat center;
   top: -5px;
   left: 54px;
-  z-index: 2;
 }
 #header-spaceman-container img {
   width: 574px;
@@ -302,8 +301,13 @@
 
 #header-middle-border {
   position: absolute;
-  bottom: -335px;
-  z-index: 1;
+  bottom: 0px;
+}
+
+#header-curved-container {
+  position: relative;
+  background-color: none;
+  z-index: 3;
 }
 
 .ibrahim-foot {
@@ -339,11 +343,11 @@
   font-feature-settings: "liga";
 }
 
-.flexBox {
+.header-boxes-flex {
   width: 910px;
   height: 320px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
 }
 
@@ -357,9 +361,17 @@
   box-shadow: 0px 4px rgba(231, 231, 231, 0.685);
 }
 
+@media screen and (max-width: 880px) {
+  .header-boxes-flex {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+}
 .alignmentVerHor {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 
