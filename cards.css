@@ -1,5 +1,5 @@
 .cards-h2 {
-  font-size: 2.3rem;
+  font-size: 40px;
   line-height: 1.2;
   color: #280d5f;
 }
@@ -29,7 +29,7 @@
 .cards-text {
   display: flex;
   flex-direction: column;
-  max-width: 410px;
+  max-width: 443px;
   font-weight: bold;
 }
 .cards-text p {
@@ -40,10 +40,9 @@
 .cards-text:nth-child(odd) {
   position: relative;
   right: 65px;
-  top: 40px;
+  top: 30px;
 }
 .cards-text:nth-child(even) {
-  border: 1px solid yellow;
   position: relative;
   bottom: 20px;
   left: 111px;
@@ -62,17 +61,22 @@
 }
 
 .cards-images-1 {
-  bottom: 20px;
+  bottom: 30px;
   right: 40px;
 }
 
 .cards-images-2 {
   /*position: relative;*/
-  top: -50px;
+  top: -55px;
+  right: 75px;
+}
+
+.cards-images-3 {
+  bottom: 40px;
   right: 65px;
 }
 
-.cards-images-3 .learn-link {
+.learn-link {
   text-decoration: none;
   color: #6cd9e1;
 }
