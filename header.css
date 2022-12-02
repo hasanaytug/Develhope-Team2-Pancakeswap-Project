@@ -1,12 +1,16 @@
 /* INFOS variables */
 /* end of INFOS variables */
 /* this debug is for test */
+body {
+  overflow: scroll;
+}
+
 .ibrahim-full-background > div:not(.ibrahim-foot) {
   color: white;
 }
 
 .ibrahim-full-background {
-  height: 1800px;
+  min-height: 1800px;
   font-family: Arial, Helvetica, sans-serif;
 }
 .ibrahim-full-background button {

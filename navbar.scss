@@ -137,7 +137,11 @@
                 width: f.$bg-widt;
                 border-radius: f.rem(16);
                 ul {
+                    margin: 0;
+                    padding: 0;
                     display: block;
+                
+
                     li:hover {
                         cursor: pointer;
                         background: f.$hoverbg;
@@ -147,6 +151,14 @@
         }
 
         .submenu1 {
+            ul {
+                margin-left: 0;
+                margin-right: 0;
+     
+                li:last-child {
+                    border-bottom-left-radius: 20px;
+                }
+            }
             position: absolute;
             top: 34px;
             left: 10px;
@@ -196,8 +208,11 @@
             width: f.$bg-widt;
             border-radius: f.rem(16);
 
+            
+
             ul {
                 display: block;
+       
                 li:hover {
                     cursor: pointer;
                     background: f.$hoverbg;
@@ -230,7 +245,7 @@
             display: none;
             margin-left: f.rem(-13);
             z-index: 1;
-            
+ 
             ul {
                 display: flex;
                 flex-direction: column;
@@ -241,11 +256,19 @@
                     flex-direction: row;
                     justify-content: flex-start;
                     align-items: center;
+                    margin-left: 0;
+                    margin-right: 0;
+
+
+                }
+                
+                li:last-child {
+                    border-bottom-left-radius: 20px;
+                }
                     
-                    a {
-                        color: #7a6eaa;
-                        flex: 1;
-                    }
+                a {
+                    color: #7a6eaa;
+                    flex: 1;
                 }
 
                 li:nth-child(4) {
@@ -264,9 +287,9 @@
             padding-left: f.rem(1);
             width: f.$bg-widt;
             border-radius: f.rem(20);
+            //padding-right: 0px;
 
             ul {
-                display: block;
                 li:hover {
                     cursor: pointer;
                     background: f.$hoverbg;
@@ -338,11 +361,17 @@
                         width: 280px;
                         height: 205px;
                         border-radius: 20px;
-                        padding-top: 0;
+                        padding: 0;
 
-                        & li {
+                        li {
                             padding: 0;
+                            margin: 0;
+                            object-fit: contain;
+                            z-index: 1;
 
+                            img {
+                                margin-left: 20px;
+                            }
                         }
     
                         & li:first-child {
@@ -377,9 +406,14 @@
 
                             &:hover {
                                 background-color: #EFF4F5;
+
                             }
                         }
-
+                        
+                        & li:last-child {
+                            border-bottom-left-radius: 20px;
+                            border-bottom-right-radius: 20px;
+                        }
                         & li:nth-child(2) {
                             a {
                                 color: rgba(118, 69, 217, 1);
@@ -408,6 +442,7 @@
                 color: rgba(40, 13, 95, 1);
                 font-size: 0.9rem;
                 box-shadow: rgba(0, 0, 0, 0.1) 0px -2px 0px inset;
+                z-index: 2;
                 
                 p {
                     margin-left: 15px;
@@ -503,7 +538,7 @@
                 font-weight: 600;
                 font-size: f.rem(16);
                 align-items: center;
-                height: f.rem(480);
+                max-height: f.rem(480);
                 box-shadow: none;
                 line-height: 1;
 

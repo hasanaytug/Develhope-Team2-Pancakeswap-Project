@@ -122,6 +122,8 @@
   border-radius: 1rem;
 }
 .navbar .nav-left .item-wrapper:hover .submenu1 ul {
+  margin: 0;
+  padding: 0;
   display: block;
 }
 .navbar .nav-left .item-wrapper:hover .submenu1 ul li:hover {
@@ -132,6 +134,13 @@
   position: absolute;
   top: 34px;
   left: 10px;
+}
+.navbar .nav-left .submenu1 ul {
+  margin-left: 0;
+  margin-right: 0;
+}
+.navbar .nav-left .submenu1 ul li:last-child {
+  border-bottom-left-radius: 20px;
 }
 .navbar .nav-left .submenu5 {
   position: absolute;
@@ -207,8 +216,13 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  margin-left: 0;
+  margin-right: 0;
 }
-.navbar .nav-left .submenu5 ul li a {
+.navbar .nav-left .submenu5 ul li:last-child {
+  border-bottom-left-radius: 20px;
+}
+.navbar .nav-left .submenu5 ul a {
   color: #7a6eaa;
   flex: 1;
 }
@@ -225,10 +239,6 @@
   padding-left: 0.0625rem;
   width: 20rem;
   border-radius: 1.25rem;
-}
-.navbar .nav-left li:hover .submenu5 ul,
-.navbar .nav-left .submenu5:hover ul {
-  display: block;
 }
 .navbar .nav-left li:hover .submenu5 ul li:hover,
 .navbar .nav-left .submenu5:hover ul li:hover {
@@ -289,10 +299,16 @@
   width: 280px;
   height: 205px;
   border-radius: 20px;
-  padding-top: 0;
+  padding: 0;
 }
 .navbar .nav-right ul #select-network-wrapper:hover #network-selection li {
   padding: 0;
+  margin: 0;
+  object-fit: contain;
+  z-index: 1;
+}
+.navbar .nav-right ul #select-network-wrapper:hover #network-selection li img {
+  margin-left: 20px;
 }
 .navbar .nav-right ul #select-network-wrapper:hover #network-selection li:first-child {
   border-bottom: 1px solid grey;
@@ -324,6 +340,10 @@
 .navbar .nav-right ul #select-network-wrapper:hover #network-selection li:not(.navbar .nav-right ul #select-network-wrapper:hover #network-selection li:first-child):hover {
   background-color: #EFF4F5;
 }
+.navbar .nav-right ul #select-network-wrapper:hover #network-selection li:last-child {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
 .navbar .nav-right ul #select-network-wrapper:hover #network-selection li:nth-child(2) a {
   color: rgb(118, 69, 217);
 }
@@ -346,6 +366,7 @@
   color: rgb(40, 13, 95);
   font-size: 0.9rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px -2px 0px inset;
+  z-index: 2;
 }
 .navbar .nav-right ul #select-network p {
   margin-left: 15px;
@@ -429,7 +450,7 @@
   font-weight: 600;
   font-size: 1rem;
   align-items: center;
-  height: 30rem;
+  max-height: 30rem;
   box-shadow: none;
   line-height: 1;
 }
