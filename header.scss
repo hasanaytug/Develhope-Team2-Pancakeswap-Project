@@ -8,6 +8,9 @@
 .ibrahim-full-background {
     height: 1800px;
     font-family: Arial, Helvetica, sans-serif;
+    button {
+        z-index: 4;
+    }
 }
 
 .headMiddleBackgroundColor {
@@ -22,6 +25,17 @@
 .ibrahim-button {
     position: relative;
     top: 5px;
+    border-radius: 15px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    height: 45px;
+    width: 195px;
+    text-align: center;
+    border: none;
+    background-color: #1fc7d4;
+    color: #fff;
+    box-shadow: rgba(14, 14, 44, 0.4) 0px -1px inset;
+    z-index: 4;position: relative;
 
     span {
         display: flex;
@@ -34,19 +48,6 @@
             display: none;
         }
     }
-
-    border-radius: 15px;
-    font-size: 14px;
-    letter-spacing: 1px;
-    height: 45px;
-    width: 195px;
-    text-align: center;
-    border: none;
-    background-color: #1fc7d4;
-    color: #fff;
-    box-shadow: rgba(14, 14, 44, 0.4) 0px -1px inset;
-    z-index: 3;
-    position: relative;
 
     &:hover {
         opacity: 0.6;
@@ -302,8 +303,6 @@
     line-height: 25px;
     color: #280d5f;
 }
-
-
 
 #buttonRightMargin {
     margin-right: 6px;

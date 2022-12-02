@@ -1,6 +1,7 @@
 .cards-h2 {
   font-size: 2.3rem;
-  line-height: 1.1;
+  line-height: 1.2;
+  color: #280d5f;
 }
 .cards-h2 span.blue-text {
   color: #7645d9;
@@ -11,28 +12,41 @@
   height: 600px;
 }
 
+#cards-2 {
+  height: 550px;
+}
+
 .cards {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
   background-color: #faf9fa;
   height: 450px;
 }
 
 .cards-text {
+  display: flex;
+  flex-direction: column;
   max-width: 410px;
   font-weight: bold;
-  color: #280d5f;
-  border: 1px solid yellow;
 }
 .cards-text p {
-  font-weight: normal;
+  color: #9C93BF;
+  font-weight: 500;
+  line-height: 1.4;
 }
 .cards-text:nth-child(odd) {
   position: relative;
-  left: -52px;
-  top: 20px;
+  right: 65px;
+  top: 40px;
+}
+.cards-text:nth-child(even) {
+  border: 1px solid yellow;
+  position: relative;
+  bottom: 20px;
+  left: 111px;
 }
 
 .cards-text p {
@@ -52,7 +66,13 @@
   right: 40px;
 }
 
-.cards-images-2 .cards-images-3 .learn-link {
+.cards-images-2 {
+  /*position: relative;*/
+  top: -50px;
+  right: 65px;
+}
+
+.cards-images-3 .learn-link {
   text-decoration: none;
   color: #6cd9e1;
 }
