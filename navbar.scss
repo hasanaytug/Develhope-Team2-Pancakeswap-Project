@@ -529,6 +529,7 @@
         .sublanguage {
             display: none;
             position: absolute;
+            //top: 57px;
         }
         
         li:hover .sublanguage,
@@ -545,7 +546,7 @@
             padding-left: f.rem(1);
             width: f.rem(180);
             min-height: f.rem(32);
-            height: 480px;
+            height: 390px;
             border-radius: f.rem(8);
             margin-left: f.rem(-65);
 
@@ -558,14 +559,16 @@
                 font-weight: 600;
                 font-size: f.rem(16);
                 align-items: center;
-                max-height: f.rem(480);
+                max-height: f.rem(390);
                 box-shadow: none;
                 line-height: 1;
 
                 li:hover {
                     color: rgb(90, 45, 133);
                     cursor: pointer;
-                    font-family: inherit;
+                    //font-family: inherit;
+                    transition: 0.3s;
+
 
                 }
 

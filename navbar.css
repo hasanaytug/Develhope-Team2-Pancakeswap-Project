@@ -453,7 +453,7 @@
   padding-left: 0.0625rem;
   width: 11.25rem;
   min-height: 2rem;
-  height: 480px;
+  height: 390px;
   border-radius: 0.5rem;
   margin-left: -4.0625rem;
 }
@@ -467,7 +467,7 @@
   font-weight: 600;
   font-size: 1rem;
   align-items: center;
-  max-height: 30rem;
+  max-height: 24.375rem;
   box-shadow: none;
   line-height: 1;
 }
@@ -475,7 +475,7 @@
 .navbar .nav-right .sublanguage:hover ul li:hover {
   color: rgb(90, 45, 133);
   cursor: pointer;
-  font-family: inherit;
+  transition: 0.3s;
 }
 .navbar .nav-right li:hover .sublanguage ul,
 .navbar .nav-right .sublanguage:hover ul {
