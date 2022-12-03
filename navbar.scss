@@ -530,18 +530,6 @@
             display: none;
             position: absolute;
             //top: 57px;
-        }
-        
-        li:hover .sublanguage,
-        .sublanguage:hover {
-            display: block;
-            position: absolute;
-        }
-        
-        li:hover .sublanguage,
-        .sublanguage:hover {
-            display: block;
-            position: absolute;
             background-color: f.$bgcolor;
             padding-left: f.rem(1);
             width: f.rem(180);
@@ -563,20 +551,36 @@
                 box-shadow: none;
                 line-height: 1;
 
+                li {
+                    text-align: center;
+                }
+            }
+        }
+        
+        li:hover .sublanguage,
+        .sublanguage:hover {
+            display: block;
+            position: absolute;
+        }
+        
+        li:hover .sublanguage,
+        .sublanguage:hover {
+            display: block;
+            position: absolute;
+
+
+            ul {
+                display: block;
+
                 li:hover {
                     color: rgb(90, 45, 133);
                     cursor: pointer;
                     transition: 0.3s;
                 }
-
             }
 
             ul {
                 display: block;
-
-                li {
-                    text-align: center;
-                }
             }
         }
     }

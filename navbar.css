@@ -439,16 +439,6 @@
 .navbar .nav-right .sublanguage {
   display: none;
   position: absolute;
-}
-.navbar .nav-right li:hover .sublanguage,
-.navbar .nav-right .sublanguage:hover {
-  display: block;
-  position: absolute;
-}
-.navbar .nav-right li:hover .sublanguage,
-.navbar .nav-right .sublanguage:hover {
-  display: block;
-  position: absolute;
   background-color: #fff;
   padding-left: 0.0625rem;
   width: 11.25rem;
@@ -457,8 +447,7 @@
   border-radius: 0.5rem;
   margin-left: -4.0625rem;
 }
-.navbar .nav-right li:hover .sublanguage ul,
-.navbar .nav-right .sublanguage:hover ul {
+.navbar .nav-right .sublanguage ul {
   display: block;
   overflow: auto;
   justify-content: center;
@@ -471,6 +460,23 @@
   box-shadow: none;
   line-height: 1;
 }
+.navbar .nav-right .sublanguage ul li {
+  text-align: center;
+}
+.navbar .nav-right li:hover .sublanguage,
+.navbar .nav-right .sublanguage:hover {
+  display: block;
+  position: absolute;
+}
+.navbar .nav-right li:hover .sublanguage,
+.navbar .nav-right .sublanguage:hover {
+  display: block;
+  position: absolute;
+}
+.navbar .nav-right li:hover .sublanguage ul,
+.navbar .nav-right .sublanguage:hover ul {
+  display: block;
+}
 .navbar .nav-right li:hover .sublanguage ul li:hover,
 .navbar .nav-right .sublanguage:hover ul li:hover {
   color: rgb(90, 45, 133);
@@ -480,10 +486,6 @@
 .navbar .nav-right li:hover .sublanguage ul,
 .navbar .nav-right .sublanguage:hover ul {
   display: block;
-}
-.navbar .nav-right li:hover .sublanguage ul li,
-.navbar .nav-right .sublanguage:hover ul li {
-  text-align: center;
 }
 
 .navbar-network-selected {

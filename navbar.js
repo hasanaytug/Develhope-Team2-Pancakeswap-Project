@@ -30,3 +30,12 @@ netSelectionOptions.map(li => {
         setTimeout(() => netSelection.style.display = '', 100); 
     });
 });
+
+document.querySelector('.lang-select').addEventListener('click', () => {
+    let subLang = document.querySelector('.sublanguage');
+
+    if (subLang.style.display === 'block')
+        subLang.style.display = '';
+    else 
+        subLang.style.display = 'block';
+})
