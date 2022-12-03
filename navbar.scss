@@ -306,12 +306,19 @@
         height: f.rem(56);
 
         ul {
+            &:not(#network-selection, .sublanguage  ul){
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                align-items: center;
+            }
+
             display: inline-flex;
             list-style: none;
             justify-content: flex-end;
 
             li {
-                margin: 0.50rem;
+                margin: 0;
                 padding: 0.50rem;
                 cursor: pointer;
 
@@ -339,6 +346,7 @@
                 margin-bottom: 0;
                 margin-left: 0;
                 margin-right: 0;
+                margin-top: 9px;
 
                 &:hover {
                     cursor: pointer;
@@ -461,7 +469,7 @@
                     flex: 1;
                 }
 
-                #bnb {
+                #selection-icon {
                     width: 32px;
                     height: 32px;
                     position: absolute;

@@ -254,8 +254,14 @@
   list-style: none;
   justify-content: flex-end;
 }
+.navbar .nav-right ul:not(#network-selection, .sublanguage ul) {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
 .navbar .nav-right ul li {
-  margin: 0.5rem;
+  margin: 0;
   padding: 0.5rem;
   cursor: pointer;
 }
@@ -278,6 +284,7 @@
   margin-bottom: 0;
   margin-left: 0;
   margin-right: 0;
+  margin-top: 9px;
 }
 .navbar .nav-right ul #select-network-wrapper:hover {
   cursor: pointer;
@@ -382,7 +389,7 @@
   font-weight: bold;
   flex: 1;
 }
-.navbar .nav-right ul #select-network #bnb {
+.navbar .nav-right ul #select-network #selection-icon {
   width: 32px;
   height: 32px;
   position: absolute;
