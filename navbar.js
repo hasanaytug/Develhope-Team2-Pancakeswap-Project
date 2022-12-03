@@ -15,7 +15,6 @@ const unsetPrevSelection = (element, arr) => {
 }
 
 let anchorTagsArr = Array.from(netSelection.querySelectorAll('a'));
-
 netSelectionOptions.map(li => {
     li.addEventListener('click', () => {
         let anchorTag = li.querySelector('a');
@@ -31,11 +30,19 @@ netSelectionOptions.map(li => {
     });
 });
 
-document.querySelector('.lang-select').addEventListener('click', () => {
-    let subLang = document.querySelector('.sublanguage');
+let langSelect = document.querySelector('.lang-select');
+let sublanguage = document.querySelector('.sublanguage');
+langSelect.addEventListener('click', () => {
+    if (sublanguage.style.display === '')
+        sublanguage.style.display = 'block';
+});
 
-    if (subLang.style.display === 'block')
-        subLang.style.display = '';
-    else 
-        subLang.style.display = 'block';
-})
+document.addEventListener('click', (event) => {
+    if ((event.target.id !== 'worldimage' 
+            && !event.target.classList.contains('lang-select')) 
+            && sublanguage.style.display === 'block') {
+        sublanguage.style.display = '';
+        console.log(event.target);
+        console.log(`has lang-select: ${event.target.classList.contains('lang-select')}`);
+    }
+});

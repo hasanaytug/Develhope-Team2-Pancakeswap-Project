@@ -1,10 +1,11 @@
 /* INFOS variables */
 /* end of INFOS variables */
 /* this debug is for test */
+/*
 body {
-  overflow: scroll;
+    overflow: scroll;
 }
-
+*/
 .ibrahim-full-background > div:not(.ibrahim-foot) {
   color: white;
 }
