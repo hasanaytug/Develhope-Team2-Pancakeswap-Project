@@ -40,6 +40,7 @@ body {
   box-shadow: rgba(14, 14, 44, 0.4) 0px -1px inset;
   z-index: 4;
   position: relative;
+  margin-bottom: 0;
 }
 .ibrahim-button span {
   display: flex;
@@ -73,6 +74,7 @@ body {
   height: 40px;
   padding-left: 4px;
   padding-top: 4px;
+  margin-bottom: 0;
   display: none;
   flex-direction: row;
   justify-content: flex-start;

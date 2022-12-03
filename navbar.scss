@@ -368,7 +368,7 @@
                         display: flex;
                         flex-direction: column;
                         position: absolute;
-                        top: 44px;
+                        top: 43px;
                         left: 0px;
                         background-color: white;
                         width: 280px;
@@ -546,7 +546,7 @@
             padding-left: f.rem(1);
             width: f.rem(180);
             min-height: f.rem(32);
-            height: 390px;
+            height: 355px;
             border-radius: f.rem(8);
             margin-left: f.rem(-65);
 
@@ -557,19 +557,16 @@
                 letter-spacing: 0.03em;
                 opacity: f.rem(1);
                 font-weight: 600;
-                font-size: f.rem(16);
+                font-size: f.rem(14);
                 align-items: center;
-                max-height: f.rem(390);
+                max-height: f.rem(355);
                 box-shadow: none;
                 line-height: 1;
 
                 li:hover {
                     color: rgb(90, 45, 133);
                     cursor: pointer;
-                    //font-family: inherit;
                     transition: 0.3s;
-
-
                 }
 
             }

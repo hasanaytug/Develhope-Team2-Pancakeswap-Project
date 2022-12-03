@@ -303,7 +303,7 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 44px;
+  top: 43px;
   left: 0px;
   background-color: white;
   width: 280px;
@@ -453,7 +453,7 @@
   padding-left: 0.0625rem;
   width: 11.25rem;
   min-height: 2rem;
-  height: 390px;
+  height: 355px;
   border-radius: 0.5rem;
   margin-left: -4.0625rem;
 }
@@ -465,9 +465,9 @@
   letter-spacing: 0.03em;
   opacity: 0.0625rem;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.875rem;
   align-items: center;
-  max-height: 24.375rem;
+  max-height: 22.1875rem;
   box-shadow: none;
   line-height: 1;
 }
