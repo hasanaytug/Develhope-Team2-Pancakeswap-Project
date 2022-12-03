@@ -274,7 +274,10 @@
   margin-top: 0.625rem;
 }
 .navbar .nav-right ul #select-network-wrapper {
-  height: 100%;
+  height: 50px;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 .navbar .nav-right ul #select-network-wrapper:hover {
   cursor: pointer;
@@ -293,7 +296,7 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 43px;
+  top: 44px;
   left: 0px;
   background-color: white;
   width: 280px;
@@ -306,6 +309,7 @@
   margin: 0;
   object-fit: contain;
   z-index: 1;
+  color: #280D5F;
 }
 .navbar .nav-right ul #select-network-wrapper:hover #network-selection li img {
   margin-left: 20px;
@@ -345,6 +349,7 @@
   border-bottom-right-radius: 20px;
 }
 .navbar .nav-right ul #select-network-wrapper:hover #network-selection li:nth-child(2) a {
+  font-weight: bold;
   color: rgb(118, 69, 217);
 }
 .navbar .nav-right ul #select-network-wrapper:hover #select-network {
@@ -385,6 +390,7 @@
 .navbar .nav-right ul #network-selection {
   display: none;
   padding: 0;
+  color: #7a6eaa;
 }
 .navbar .nav-right ul .connect {
   position: relative;
@@ -467,6 +473,11 @@
 .navbar .nav-right li:hover .sublanguage ul li,
 .navbar .nav-right .sublanguage:hover ul li {
   text-align: center;
+}
+
+.navbar-selected-net {
+  font-weight: bold;
+  color: rgb(118, 69, 217);
 }
 
 /*# sourceMappingURL=navbar.css.map */

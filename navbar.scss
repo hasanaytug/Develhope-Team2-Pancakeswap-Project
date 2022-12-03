@@ -299,6 +299,8 @@
 
     }
 
+
+
     .nav-right {
         background-color: f.$bgcolor;
         height: f.rem(56);
@@ -333,7 +335,10 @@
             }
 
             #select-network-wrapper {
-                height: 100%;
+                height: 50px;
+                margin-bottom: 0;
+                margin-left: 0;
+                margin-right: 0;
 
                 &:hover {
                     cursor: pointer;
@@ -355,7 +360,7 @@
                         display: flex;
                         flex-direction: column;
                         position: absolute;
-                        top: 43px;
+                        top: 44px;
                         left: 0px;
                         background-color: white;
                         width: 280px;
@@ -368,6 +373,7 @@
                             margin: 0;
                             object-fit: contain;
                             z-index: 1;
+                            color: #280D5F;
 
                             img {
                                 margin-left: 20px;
@@ -406,7 +412,6 @@
 
                             &:hover {
                                 background-color: #EFF4F5;
-
                             }
                         }
                         
@@ -416,14 +421,16 @@
                         }
                         & li:nth-child(2) {
                             a {
+                                font-weight: bold;
                                 color: rgba(118, 69, 217, 1);
                             }
                         }
                     }
 
                     #select-network {
-                        box-shadow: rgba(0, 0, 0, 0) 0px -2px 0px inset;                    }
+                        box-shadow: rgba(0, 0, 0, 0) 0px -2px 0px inset;
                     }
+                }
             }
 
             #select-network {
@@ -465,6 +472,7 @@
             #network-selection {
                 display: none;
                 padding: 0;
+                color: #7a6eaa;
             }
 
             .connect {
@@ -562,3 +570,7 @@
     }
 }
 
+.navbar-selected-net {
+    font-weight: bold;
+    color: rgba(118, 69, 217, 1);
+}
