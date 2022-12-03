@@ -419,12 +419,16 @@
                             border-bottom-left-radius: 20px;
                             border-bottom-right-radius: 20px;
                         }
+                        
+                        /*
                         & li:nth-child(2) {
                             a {
                                 font-weight: bold;
                                 color: rgba(118, 69, 217, 1);
                             }
                         }
+                        */
+                        
                     }
 
                     #select-network {
@@ -570,7 +574,8 @@
     }
 }
 
-.navbar-selected-net {
+.navbar-network-selected {
     font-weight: bold;
-    color: rgba(118, 69, 217, 1);
+    //color: rgba(118, 69, 217, 1);
+    color: #8b67d2;
 }

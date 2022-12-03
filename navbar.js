@@ -1,3 +1,6 @@
-const netSelection = document.querySelector('#network-selection');
+let netSelectionOptions = Array.from(document.querySelector('#network-selection').getElementsByTagName('li'));
+netSelectionOptions.shift();
 
-console.log(netSelection);
+netSelectionOptions.map(li => {
+    li.addEventListener('click', () => li.querySelector('a').classList.add('navbar-network-selected'));
+});
