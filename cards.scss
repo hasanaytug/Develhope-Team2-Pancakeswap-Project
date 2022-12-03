@@ -11,11 +11,43 @@
 
 #cards-1 {
   background-color: white;
-  min-height: 400px;
+  height: 350px;
+
+  .cards-text {
+    position: relative;
+    right: 65px;
+    bottom: 85px;
+  }
 }
 
 #cards-2 {
-  height: 550px;
+  
+  .cards-text {
+    position: relative;
+    left: 90px;
+  }
+
+}
+
+#cards-3 {
+  .cards-text {
+    position: relative;
+    right: 70px;
+  }
+}
+
+.cards-images-1 {
+  bottom: 150px;
+  right: 40px;
+}
+.cards-images-2 {
+  position: relative;
+  top: -55px;
+  right: 100px;
+}
+.cards-images-3 {
+  bottom: 40px;
+  right: 65px;
 }
 
 .cards{
@@ -32,8 +64,6 @@
 
 }
 
-
-
 .cards-text{
   display: flex;
   flex-direction: column;
@@ -44,19 +74,6 @@
     font-weight: 500;
     line-height: 1.4;
   }
-
-  
-  &:nth-child(odd) {
-    position: relative;
-    right: 65px;
-    top: 30px;
-  }
-
-  &:nth-child(even) {
-    position: relative;
-    bottom: 20px;
-    left: 111px;
-  }  
 }
 
 .cards-text p{
@@ -70,21 +87,6 @@
   height: 300px;
   z-index: 2;
   position: relative;
-}
-
-
-.cards-images-1 {
-  bottom: 30px;
-  right: 40px;
-}
-.cards-images-2 {
-  /*position: relative;*/
-  top: -55px;
-  right: 75px;
-}
-.cards-images-3 {
-  bottom: 40px;
-  right: 65px;
 }
 
 .learn-link{
