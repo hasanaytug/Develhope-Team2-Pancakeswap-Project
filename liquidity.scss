@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: Kanit, sans-serif;
+}
+
+.trade-nav {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 99px;
+  background: #FFFFFFB3;
+  align-items: flex-end;
+  justify-content: center;
+
+  .tradeNav-item {
+    display: flex;
+    gap: 20px;
+
+    a{
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+
+}
+
+.liquidity-main-area {
+  display: grid;
+  grid-template-rows:50% 30% 20%;
+  width: 100%;;
+  height: 615px;
+  background: linear-gradient(139.73deg, #e5fdff, #f3efff);
+
+}
+
+.cardContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  height: 279px;
+  
+  #liquid-card {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+    width: 434px;
+    height: 279px;
+    background: #fff;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    border-radius: 24px;
+    box-shadow:  0  5px #EEEE;
+    border: 3px solid #EEEE;
+    
+    .card-top {
+      display: flex;
+      flex-direction: column;
+      padding: 24px;
+      justify-content: space-between;
+      height: 110;
+
+      .your-liquid {
+        font: 20px;
+        padding-bottom: 24px;
+        color: #280D5F;
+        font-weight: bold;
+      }
+      .remove-lqd {
+        color: #7A6EAA;
+      }
+    }
+     .connect-toWallet {
+      background: #EEEE;
+      padding: 24px;
+      text-align: center;
+      margin: 0;
+     }
+
+    button {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      padding: 15px;
+      margin: 0 18px;
+      background: #1FC7D4;
+      border: none;
+      border-radius: 16px;
+      cursor: pointer;
+      h2, i {
+        color: #fff;
+      }
+      i {
+        font-size: 24px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.footer-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  
+  .footer-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 0;
+    float: right;
+    width: 816.6px;
+    height: 108px;
+  }
+}
+//!inner page starts from here
+
+// #seondPage-hide {
+//   display: none;
+// }
+
+.trade-nav2 {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 60px;
+  background: #FFFFFFB3;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.liquidity-main-area2 {
+  display: grid;
+  grid-template-rows:65% 20% 15%;
+  width: 100%;;
+  height: 656px;
+  background: linear-gradient(139.73deg, #e5fdff, #f3efff);
+  position: absolute;
+
+  .innerpage-center {
+    display: flex;
+    height: 126px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    
+    .textWraper {
+      padding: 1.15rem;
+      border: 1px solid #FFFFFFB3;
+      background: #fff;
+      border-radius: 16px;
+     
+      .tex-content {
+        width: 358px;
+        height: 84px;
+        text-align: center;
+        font-weight: 400;
+        line-height: 1.5;
+        font-size: 14px;
+        color: #280d5f;
+        justify-content: center;
+        
+      }
+    }
+    
+  }
+
+  
+  .cardContainer2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 33px;
+  
+  #liquid-card2 {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+    width: 434px;
+    height: 392px;
+    background: #fff;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    border-radius: 24px;
+    box-shadow:  0 0 3px rgba(218, 214, 214, 0.933);
+    border: 3px solid #EEEE;
+  }
+  
+  }
+
+  
+  .footer-area2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    
+    .footer-right2 {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      padding-bottom: 0;
+      float: right;
+      width: 816.6px;
+      height: 108px;
+    }
+  }
+
+  
+}
+
+
+
+
+
