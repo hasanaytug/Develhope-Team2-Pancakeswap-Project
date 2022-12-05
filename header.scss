@@ -267,12 +267,34 @@ body {
     top: -5px;
     left: 54px;
 
-    img {
+    #header-spaceman {
         width: 574px;
         //position: absolute;
         //left: 20px;
         animation: 3s ease-in-out 2s infinite normal none running spaceman-floating;
     }
+
+    .header-star {
+        position: absolute;
+        top: 0px;
+        opacity: 0;
+        width: 512px;
+    }
+
+    #header-star-l {
+        z-index: 5;
+        animation: 2.5s linear 3s infinite normal none running blinking-star;
+    }
+    
+    #header-star-r {
+        z-index: 5;
+        animation: 4s linear 2s infinite normal none running blinking-star;
+    }
+    
+    #header-star-top {
+        animation: 3s linear 1s infinite normal none running blinking-star;
+    }
+
 }
 
 @keyframes spaceman-floating {
@@ -286,6 +308,18 @@ body {
     
     100% {
       transform: translate(0px, 0px);
+    }
+}
+
+@keyframes blinking-star {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }
 
