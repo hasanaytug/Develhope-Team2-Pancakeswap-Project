@@ -1,1 +1,6 @@
-console.log('Don\'t forget about me!');
+document.querySelector('#fab').addEventListener('click', () => {
+    window.scroll({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
