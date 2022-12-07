@@ -5,7 +5,9 @@
 @import url(cards.css);
 @import url("./infos.css");
 @import url("./signup.css");
+@import url("./footer.css");
 @import url("./fab.css");
+
 
 * {
   padding: 0;
