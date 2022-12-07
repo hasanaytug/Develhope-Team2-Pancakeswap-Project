@@ -1,4 +1,5 @@
 #footer {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -21,37 +22,66 @@
   gap: 2.5rem;
   width: 85%;
 }
-#footer div ul {
+#footer div ul:not(#telegram-submenu) {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   gap: 1rem;
   align-items: flex-start;
 }
-#footer div ul li:first-child {
+#footer div ul:not(#telegram-submenu) li:first-child {
   color: #9a6aff;
   font-weight: bold;
   font-size: 18px;
 }
-#footer div ul li a {
+#footer div ul:not(#social-media > ul):not(#telegram-submenu):first-child li:nth-child(2) a {
+  color: #ffb237;
+}
+#footer div li a {
   font-size: 15px;
   color: white;
 }
-#footer div ul li a:hover {
+#footer div li a:hover {
   text-decoration: underline 1px;
 }
-#footer div #social-media {
+#footer #social-media {
   border-bottom: 1px solid #383241;
   width: 80vw;
   height: 60px;
   grid-column: span 4;
 }
-#footer div #social-media ul {
+#footer #social-media ul:not(#telegram-submenu) {
   display: flex;
   flex-direction: row;
 }
-#footer div #social-media ul li a img {
+#footer #social-media ul:not(#telegram-submenu) li a img {
   margin-right: 10px;
+}
+#footer #telegram:hover {
+  cursor: pointer;
+}
+#footer #telegram:hover #telegram-submenu {
+  display: flex !important;
+  flex-direction: column;
+  gap: 0.6rem;
+  overflow-y: scroll;
+}
+#footer #telegram-submenu {
+  z-index: 5;
+  position: absolute;
+  display: none;
+  width: 162px;
+  height: 385px;
+  border-radius: 5px;
+  background-color: #27262C;
+  padding: 15px;
+  bottom: 186px;
+  left: 60px;
+}
+#footer #telegram-submenu a {
+  font-size: 14px;
+  font-weight: bold;
+  color: #b8add2;
 }
 
 /*# sourceMappingURL=footer.css.map */
