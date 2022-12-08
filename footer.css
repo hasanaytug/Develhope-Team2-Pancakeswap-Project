@@ -5,8 +5,6 @@
   justify-content: center;
   align-items: center;
   width: 100vw;
-  padding-top: 25px;
-  padding-bottom: 25px;
   background-color: #27262C;
 }
 #footer img {
@@ -14,13 +12,14 @@
   justify-self: flex-end;
 }
 #footer div {
-  margin-top: 20px;
+  margin-top: 35px;
+  padding-top: 20px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 2.5rem;
   width: 85%;
-  height: 285px;
+  height: 290px;
 }
 #footer div ul:not(#telegram-submenu) {
   display: flex;
@@ -75,8 +74,8 @@
   border-radius: 5px;
   background-color: #27262C;
   padding: 15px;
-  bottom: 186px;
-  left: 60px;
+  bottom: -6px;
+  left: 64px;
 }
 #footer #telegram-submenu a {
   font-size: 14px;
@@ -85,9 +84,42 @@
 }
 
 #footer-bottom {
-  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 120px;
   background-color: #27262C;
-  padding: 20px 20px;
+}
+#footer-bottom #checkbox-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 0;
+  width: 85%;
+  padding-top: 25px;
+}
+#footer-bottom #checkbox-container #footer-lang {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  height: 50px;
+}
+#footer-bottom #checkbox-container #footer-lang svg {
+  fill: #b8add2;
+}
+#footer-bottom #checkbox-container #footer-lang p {
+  color: #b8add2;
+  font-size: 14px;
+  margin-top: 5px;
+  display: inline;
+}
+#footer-bottom #checkbox-container #footer-lang:hover {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: 0.3s;
 }
 
 #theme-selection {
@@ -129,18 +161,17 @@
   top: 2px;
   left: 2px;
   background: #27262c;
-  /*
-  img {
-      flex: 0;
-
-  }
-  */
 }
 #theme-checkbox label:hover {
   border: 2px solid #9A6AFF;
 }
 #theme-checkbox #theme-selection:checked + label {
   left: 27px;
+}
+
+#footer-logo {
+  position: relative;
+  right: 50px;
 }
 
 /*# sourceMappingURL=footer.css.map */

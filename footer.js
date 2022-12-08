@@ -1,5 +1,4 @@
 const themeButton = document.querySelector('#theme-selection');
-
 themeButton.checked = false;
 
 const themeIcon = document.querySelector('#f-theme-icon');
