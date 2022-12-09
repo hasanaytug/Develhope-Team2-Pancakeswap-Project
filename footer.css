@@ -38,7 +38,7 @@
 #footer div ul:not(#telegram-submenu) li:not(li:first-child) {
   font-weight: lighter;
 }
-#footer div ul:not(#social-media > ul):not(#telegram-submenu):first-child li:nth-child(2) a {
+#footer div ul:not(#social-media > ul, #telegram-submenu):first-child li:nth-child(2) a {
   color: #ffb237;
 }
 #footer div li a {
@@ -61,6 +61,10 @@
 #footer #social-media ul:not(#telegram-submenu) li a img {
   margin-right: 10px;
 }
+#footer #telegram {
+  position: relative;
+  right: 3px;
+}
 #footer #telegram:hover {
   cursor: pointer;
 }
@@ -80,7 +84,7 @@
   background-color: #27262C;
   padding: 15px;
   bottom: 25px;
-  left: 64px;
+  left: -60px;
 }
 #footer #telegram-submenu a {
   font-size: 14px;
@@ -109,23 +113,66 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 0.5rem;
   height: 50px;
   flex: 0.91;
+  position: relative;
 }
-#footer-bottom #checkbox-container #footer-lang svg {
+#footer-bottom #checkbox-container #footer-lang #lang-icons-wrapper {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 105%;
+}
+#footer-bottom #checkbox-container #footer-lang #lang-icons-wrapper svg {
   fill: #b8add2;
 }
-#footer-bottom #checkbox-container #footer-lang p {
+#footer-bottom #checkbox-container #footer-lang #lang-icons-wrapper p {
   color: #b8add2;
   font-size: 14px;
   margin-top: 5px;
   display: inline;
 }
-#footer-bottom #checkbox-container #footer-lang:hover {
+#footer-bottom #checkbox-container #footer-lang #lang-icons-wrapper:hover {
   cursor: pointer;
+}
+#footer-bottom #checkbox-container #footer-lang #lang-icons-wrapper:hover p, #footer-bottom #checkbox-container #footer-lang #lang-icons-wrapper:hover svg {
   opacity: 0.6;
   transition: 0.3s;
+}
+#footer-bottom #checkbox-container #footer-lang #lang-icons-wrapper:hover #footer-langs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  bottom: 50px;
+  left: -22px;
+  width: 188px;
+  height: 400px;
+  background-color: #27262C;
+  color: #f4eeff;
+  overflow-y: scroll;
+  border-radius: 4px;
+  padding: 15px;
+}
+#footer-bottom #checkbox-container #footer-lang #lang-icons-wrapper:hover #footer-langs li {
+  width: 158px;
+  min-height: 32px;
+  font-size: 15px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#footer-bottom #checkbox-container #footer-lang #lang-icons-wrapper:hover #footer-langs li:hover {
+  opacity: 0.6;
+  transition: 0.3s;
+  cursor: pointer;
+}
+#footer-bottom #checkbox-container #footer-lang #footer-langs {
+  display: none;
 }
 
 #theme-selection {
@@ -185,6 +232,7 @@
   flex-direction: row;
   justify-content: space-between;
   gap: 1rem;
+  position: relative;
 }
 #footer-right div:first-child {
   display: flex;
@@ -202,7 +250,7 @@
 }
 #footer-right img:first-child {
   position: absolute;
-  right: 400px;
+  left: -35px;
   width: 24px;
   transition: width ease 0.3s;
 }
