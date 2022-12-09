@@ -111,6 +111,7 @@
   align-items: center;
   gap: 0.5rem;
   height: 50px;
+  flex: 0.91;
 }
 #footer-bottom #checkbox-container #footer-lang svg {
   fill: #b8add2;
@@ -177,6 +178,61 @@
 #footer-logo {
   position: relative;
   right: 50px;
+}
+
+#footer-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+}
+#footer-right div:first-child {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+#footer-right div:first-child:hover {
+  cursor: pointer;
+}
+#footer-right div:first-child:hover img {
+  width: 28px;
+  transition: width ease 0.3s;
+}
+#footer-right img:first-child {
+  position: absolute;
+  right: 400px;
+  width: 24px;
+  transition: width ease 0.3s;
+}
+#footer-right p {
+  color: #b8add2;
+  margin-top: 3px;
+  font-weight: bold;
+}
+#footer-right button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  appearance: none;
+  border: none;
+  width: 138px;
+  height: 32px;
+  border-radius: 20px;
+  background-color: #1FC7D4;
+}
+#footer-right button p {
+  justify-self: flex-start;
+  color: white;
+  flex: 0.7;
+}
+#footer-right button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: 0.3s;
 }
 
 /*# sourceMappingURL=footer.css.map */
