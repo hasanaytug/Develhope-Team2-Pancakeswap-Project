@@ -143,6 +143,9 @@
 }
 #footer-bottom #checkbox-container #footer-lang #lang-icons-wrapper:hover #footer-langs {
   display: flex;
+}
+#footer-bottom #checkbox-container #footer-lang #footer-langs {
+  display: none;
   flex-direction: column;
   align-items: center;
   position: absolute;
@@ -151,12 +154,15 @@
   width: 188px;
   height: 400px;
   background-color: #27262C;
-  color: #f4eeff;
   overflow-y: scroll;
   border-radius: 4px;
   padding: 15px;
 }
-#footer-bottom #checkbox-container #footer-lang #lang-icons-wrapper:hover #footer-langs li {
+#footer-bottom #checkbox-container #footer-lang #footer-langs button {
+  color: #f4eeff;
+  appearance: none;
+  border: none;
+  background-color: #27262C;
   width: 158px;
   min-height: 32px;
   font-size: 15px;
@@ -166,13 +172,10 @@
   justify-content: center;
   align-items: center;
 }
-#footer-bottom #checkbox-container #footer-lang #lang-icons-wrapper:hover #footer-langs li:hover {
+#footer-bottom #checkbox-container #footer-lang #footer-langs button:hover {
   opacity: 0.6;
   transition: 0.3s;
   cursor: pointer;
-}
-#footer-bottom #checkbox-container #footer-lang #footer-langs {
-  display: none;
 }
 
 #theme-selection {
