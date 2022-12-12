@@ -1,6 +1,6 @@
 @import url("navbar.css");
 @import url(header.css);
-@import url(pools.css);
+@import url(pools/pools.css);
 @import url(variables.css);
 @import url(cards.css);
 @import url("./infos.css");
