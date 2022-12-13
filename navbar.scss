@@ -1,4 +1,3 @@
-@use "sass:color";
 @use "variables.scss" as f;
 
 * {
@@ -8,6 +7,26 @@
     font-family: Kanit, sans-serif;
     text-decoration: none;
     list-style: none;
+}
+
+:root {
+    --navbar-bg-color: #{f.$bgcolor};
+    --navbar-bg-color-dark: #{f.$bgcolor-dark};
+    --sublang-top-txt-color: #{f.$sublang-text-color};
+    --sublang-top-txt-color-alt: #{f.$sublang-text-color-alt};
+    --sublang-text-hover: #{f.$sublang-text-hover};
+    --sublang-text-hover-alt: #{f.$sublang-text-hover-alt};
+    --world-img: #{f.$world-img};
+    --world-img-alt: #{f.$world-img-alt};
+    --select-net-bg-color: #{f.$select-net-bg-color};
+    --select-net-bg-color-alt: #{f.$select-net-bg-color-alt};
+    --select-net-txt-color: #{f.$select-net-txt-color};
+    --select-net-txt-color-hover: #{f.$select-net-txt-color-hover};
+    --select-net-txt-color-hover-alt: #{f.$select-net-txt-color-hover-alt};
+    --select-net-txt-color-alt: #{f.$select-net-txt-color-alt};
+    --net-selection-bg-color: #{f.$net-selection-bg-color};
+    --net-selection-bg-color-alt: #{f.$net-selection-bg-color-alt};
+
 }
 
 
@@ -43,7 +62,6 @@
     display: inline-block;
     width: 8px;
     height: 8px;
-    //border: 1px solid greenyellow;
     background-color: #31D0AA;
     border-radius: 10px;
     z-index: 10;
@@ -66,7 +84,7 @@
     align-items: center;
     width: 100%;
     box-sizing: content-box;
-    background-color: f.$bgcolor;
+    background-color: var(--navbar-bg-color);
     height: f.rem(56);
     border-bottom: 1px solid #E7E3EB;
     transition: ease-in 0.2s;
@@ -77,7 +95,7 @@
         cursor: pointer;
         position: relative;
         align-items: center;
-        background-color: f.$bgcolor;
+        background-color: var(--navbar-bg-color);
         height: f.rem(56);
 
         ul {
@@ -132,7 +150,7 @@
             .submenu1 {
                 display: block;
                 position: absolute;
-                background: f.$bgcolor;
+                background: var(--navbar-bg-color);
                 margin-top: f.$margtop;
                 width: f.$bg-widt;
                 border-radius: f.rem(16);
@@ -302,7 +320,7 @@
 
 
     .nav-right {
-        background-color: f.$bgcolor;
+        background-color: var(--navbar-bg-color);
         height: f.rem(56);
 
         ul {
@@ -350,11 +368,14 @@
 
                 &:hover {
                     cursor: pointer;
-                    background-color: rgba(244, 247, 248, 0.2);
+                    /*background-color: var(--select-net-bg-color-hover);*/
 
+                    
                     #select-network {
-                        color: rgba(40, 13, 95, 0.5);
+                        color: var(--select-net-txt-color-hover);
                     }
+                    
+                    
                     
                     #network-down-arrow {
                         opacity: 0.5;
@@ -370,7 +391,7 @@
                         position: absolute;
                         top: 43px;
                         left: 0px;
-                        background-color: white;
+                        background-color: var(--net-selection-bg-color);
                         width: 280px;
                         height: 205px;
                         border-radius: 20px;
@@ -427,20 +448,10 @@
                             border-bottom-left-radius: 20px;
                             border-bottom-right-radius: 20px;
                         }
-                        
-                        /*
-                        & li:nth-child(2) {
-                            a {
-                                font-weight: bold;
-                                color: rgba(118, 69, 217, 1);
-                            }
-                        }
-                        */
-                        
                     }
 
                     #select-network {
-                        box-shadow: rgba(0, 0, 0, 0) 0px -2px 0px inset;
+                        box-shadow: rgba(0, 0, 0, 0.1) 0px -2px 0px inset;
                     }
                 }
             }
@@ -457,10 +468,10 @@
                 border-radius: 20px;
                 padding-left: 20px;
                 box-sizing: content-box;
-                background-color: rgba(244, 247, 248, 1);
-                color: rgba(40, 13, 95, 1);
+                background-color: var(--select-net-bg-color);
+                color: var(--select-net-txt-color);
                 font-size: 0.9rem;
-                box-shadow: rgba(0, 0, 0, 0.1) 0px -2px 0px inset;
+                box-shadow: rgba(0, 0, 0, 0.2) 0px -2px 0px inset;
                 z-index: 2;
                 
                 p {
@@ -519,7 +530,7 @@
                 align-items: center;
 
                 .dollars {
-                    color: #7A6EAA;
+                    color: var(--world-img);
                     font-weight: bold;
                     padding-left: f.rem(3);
                 }
@@ -529,21 +540,21 @@
         .sublanguage {
             display: none;
             position: absolute;
-            //top: 57px;
-            background-color: f.$bgcolor;
+            background-color: var(--navbar-bg-color);
             padding-left: f.rem(1);
             width: f.rem(180);
             min-height: f.rem(32);
             height: 355px;
             border-radius: f.rem(8);
             margin-left: f.rem(-65);
-
+            
             ul {
+                color: var(--sublang-top-txt-color);
                 display: block;
                 overflow: auto; 
                 justify-content: center;
                 letter-spacing: 0.03em;
-                opacity: f.rem(1);
+                opacity: 1;
                 font-weight: 600;
                 font-size: f.rem(14);
                 align-items: center;
@@ -573,7 +584,7 @@
                 display: block;
 
                 li:hover {
-                    color: rgb(90, 45, 133);
+                    color: var(--sublang-text-hover);
                     cursor: pointer;
                     transition: 0.3s;
                 }
@@ -590,4 +601,12 @@
     font-weight: bold;
     //color: rgba(118, 69, 217, 1);
     color: #8b67d2;
+}
+
+.top-right-icons {
+    fill: var(--world-img);
+}
+
+#network-down-arrow {
+    fill: var(--select-net-txt-color);
 }

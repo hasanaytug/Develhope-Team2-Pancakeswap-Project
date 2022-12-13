@@ -8,6 +8,38 @@ $hoverbg: rgb(192, 197, 192);
   @return calc($sizes/16) + rem;
 }
 $ibrahim-debug-color: red;
+
+
+/* NAVBAR variables */
+$bgcolor-dark: #27262c;
+$sublang-text-color: #280d5f;
+$sublang-text-color-alt: #fff;
+$sublang-text-hover: rgb(90, 45, 133);
+$sublang-text-hover-alt: rgba(255, 255, 255, 0.6);
+$world-img-alt:#b8add2;
+$world-img: #7a6eaa;
+$select-net-bg-color: rgba(244, 247, 248, 1);
+$select-net-bg-color-alt: #27262c96;
+$select-net-txt-color: rgba(40, 13, 95, 1);
+$select-net-txt-color-hover: rgba(40, 13, 95, 0.5);
+$select-net-txt-color-alt: #f4eeff; 
+$select-net-txt-color-hover-alt: #f4eeffab; 
+$net-selection-bg-color: #fff;
+$net-selection-bg-color-alt: #27262c;
+
+
+
+
+
+
+/* end of NAVBAR variables*/
+
+
+
+
+
+
+
 /* INFOS variables */
 $infos-1-bg-color: #FAF9FA;
 $up-down-color: #7a6eaa;

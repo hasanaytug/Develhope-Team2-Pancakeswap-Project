@@ -8,9 +8,8 @@ const unsetPrevSelection = (element, arr) => {
     const elementIndex = arr.indexOf(element);
     arr.map(item => {
         if (arr.indexOf(item) !== elementIndex 
-            && item.classList.contains(selectionClass)) {
+            && item.classList.contains(selectionClass))
                 item.classList.remove(selectionClass);
-            }   
     });
 }
 

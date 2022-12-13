@@ -1,3 +1,5 @@
+/* NAVBAR variables */
+/* end of NAVBAR variables*/
 /* INFOS variables */
 /* end of INFOS variables */
 * {
@@ -7,6 +9,25 @@
   font-family: Kanit, sans-serif;
   text-decoration: none;
   list-style: none;
+}
+
+:root {
+  --navbar-bg-color: #fff;
+  --navbar-bg-color-dark: #27262c;
+  --sublang-top-txt-color: #280d5f;
+  --sublang-top-txt-color-alt: #fff;
+  --sublang-text-hover: rgb(90, 45, 133);
+  --sublang-text-hover-alt: rgba(255, 255, 255, 0.6);
+  --world-img: #7a6eaa;
+  --world-img-alt: #b8add2;
+  --select-net-bg-color: rgb(244, 247, 248);
+  --select-net-bg-color-alt: rgba(39, 38, 44, 0.5882352941);
+  --select-net-txt-color: rgb(40, 13, 95);
+  --select-net-txt-color-hover: rgba(40, 13, 95, 0.5);
+  --select-net-txt-color-hover-alt: rgba(244, 238, 255, 0.6705882353);
+  --select-net-txt-color-alt: #f4eeff;
+  --net-selection-bg-color: #fff;
+  --net-selection-bg-color-alt: #27262c;
 }
 
 .trading li:last-child, .submenu5:nth-child(3) {
@@ -59,7 +80,7 @@
   align-items: center;
   width: 100%;
   box-sizing: content-box;
-  background-color: #fff;
+  background-color: var(--navbar-bg-color);
   height: 3.5rem;
   border-bottom: 1px solid #E7E3EB;
   transition: ease-in 0.2s;
@@ -70,7 +91,7 @@
   cursor: pointer;
   position: relative;
   align-items: center;
-  background-color: #fff;
+  background-color: var(--navbar-bg-color);
   height: 3.5rem;
 }
 .navbar .nav-left ul {
@@ -116,7 +137,7 @@
 .navbar .nav-left .item-wrapper:hover .submenu1 {
   display: block;
   position: absolute;
-  background: #fff;
+  background: var(--navbar-bg-color);
   margin-top: 1.2rem;
   width: 20rem;
   border-radius: 1rem;
@@ -246,7 +267,7 @@
   background: rgb(192, 197, 192);
 }
 .navbar .nav-right {
-  background-color: #fff;
+  background-color: var(--navbar-bg-color);
   height: 3.5rem;
 }
 .navbar .nav-right ul {
@@ -288,10 +309,10 @@
 }
 .navbar .nav-right ul #select-network-wrapper:hover {
   cursor: pointer;
-  background-color: rgba(244, 247, 248, 0.2);
+  /*background-color: var(--select-net-bg-color-hover);*/
 }
 .navbar .nav-right ul #select-network-wrapper:hover #select-network {
-  color: rgba(40, 13, 95, 0.5);
+  color: var(--select-net-txt-color-hover);
 }
 .navbar .nav-right ul #select-network-wrapper:hover #network-down-arrow {
   opacity: 0.5;
@@ -305,19 +326,11 @@
   position: absolute;
   top: 43px;
   left: 0px;
-  background-color: white;
+  background-color: var(--net-selection-bg-color);
   width: 280px;
   height: 205px;
   border-radius: 20px;
   padding: 0;
-  /*
-  & li:nth-child(2) {
-      a {
-          font-weight: bold;
-          color: rgba(118, 69, 217, 1);
-      }
-  }
-  */
 }
 .navbar .nav-right ul #select-network-wrapper:hover #network-selection li {
   padding: 0;
@@ -364,7 +377,7 @@
   border-bottom-right-radius: 20px;
 }
 .navbar .nav-right ul #select-network-wrapper:hover #select-network {
-  box-shadow: rgba(0, 0, 0, 0) 0px -2px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px -2px 0px inset;
 }
 .navbar .nav-right ul #select-network {
   display: flex;
@@ -378,10 +391,10 @@
   border-radius: 20px;
   padding-left: 20px;
   box-sizing: content-box;
-  background-color: rgb(244, 247, 248);
-  color: rgb(40, 13, 95);
+  background-color: var(--select-net-bg-color);
+  color: var(--select-net-txt-color);
   font-size: 0.9rem;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px -2px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px -2px 0px inset;
   z-index: 2;
 }
 .navbar .nav-right ul #select-network p {
@@ -432,14 +445,14 @@
   align-items: center;
 }
 .navbar .nav-right ul .fee .dollars {
-  color: #7A6EAA;
+  color: var(--world-img);
   font-weight: bold;
   padding-left: 0.1875rem;
 }
 .navbar .nav-right .sublanguage {
   display: none;
   position: absolute;
-  background-color: #fff;
+  background-color: var(--navbar-bg-color);
   padding-left: 0.0625rem;
   width: 11.25rem;
   min-height: 2rem;
@@ -448,11 +461,12 @@
   margin-left: -4.0625rem;
 }
 .navbar .nav-right .sublanguage ul {
+  color: var(--sublang-top-txt-color);
   display: block;
   overflow: auto;
   justify-content: center;
   letter-spacing: 0.03em;
-  opacity: 0.0625rem;
+  opacity: 1;
   font-weight: 600;
   font-size: 0.875rem;
   align-items: center;
@@ -479,7 +493,7 @@
 }
 .navbar .nav-right li:hover .sublanguage ul li:hover,
 .navbar .nav-right .sublanguage:hover ul li:hover {
-  color: rgb(90, 45, 133);
+  color: var(--sublang-text-hover);
   cursor: pointer;
   transition: 0.3s;
 }
@@ -491,6 +505,14 @@
 .navbar-network-selected {
   font-weight: bold;
   color: #8b67d2;
+}
+
+.top-right-icons {
+  fill: var(--world-img);
+}
+
+#network-down-arrow {
+  fill: var(--select-net-txt-color);
 }
 
 /*# sourceMappingURL=navbar.css.map */
