@@ -28,6 +28,9 @@
   --select-net-txt-color-alt: #f4eeff;
   --net-selection-bg-color: #fff;
   --net-selection-bg-color-alt: #27262c;
+  --nav-item-hover: #EFF4F5;
+  --nav-item-hover-alt: #353547;
+  --net-li-hover: ;
 }
 
 .trading li:last-child, .submenu5:nth-child(3) {
@@ -124,7 +127,7 @@
   background-color: rgb(192, 197, 192);
 }
 .navbar .nav-left ul li.item:hover {
-  background-color: #EFF4F5;
+  background-color: var(--nav-item-hover);
   border-radius: 0.625rem;
 }
 .navbar .nav-left .item-wrapper, .navbar .nav-left .dots-item-wrapper {
@@ -149,7 +152,7 @@
 }
 .navbar .nav-left .item-wrapper:hover .submenu1 ul li:hover {
   cursor: pointer;
-  background: rgb(192, 197, 192);
+  background: var(--nav-item-hover);
 }
 .navbar .nav-left .submenu1 {
   position: absolute;
@@ -162,6 +165,7 @@
 }
 .navbar .nav-left .submenu1 ul li:last-child {
   border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 .navbar .nav-left .submenu5 {
   position: absolute;
@@ -183,10 +187,11 @@
 }
 .navbar .nav-left .sumenu1 .item:hover ul {
   display: block;
-  background: rgb(192, 197, 192);
+  background: green;
   border-radius: 0.575rem;
   padding-left: 0.0625rem;
   z-index: 1000;
+  border: 1px solid red;
 }
 .navbar .nav-left li:hover .submenu1,
 .navbar .nav-left .submenu1:hover {
@@ -209,18 +214,18 @@
 .navbar .nav-left .dots-item-wrapper:hover .submenu5 {
   display: block;
   position: absolute;
-  background-color: #fff;
   margin-top: 1.06rem;
   padding-left: 0.0625rem;
   width: 20rem;
   border-radius: 1.25rem;
+  background-color: var(--navbar-bg-color);
 }
 .navbar .nav-left .dots-item-wrapper:hover .submenu5 ul {
   display: block;
 }
 .navbar .nav-left .dots-item-wrapper:hover .submenu5 ul li:hover {
   cursor: pointer;
-  background: rgb(192, 197, 192);
+  background: var(--nav-item-hover);
 }
 .navbar .nav-left .submenu5 {
   display: none;
@@ -242,6 +247,7 @@
 }
 .navbar .nav-left .submenu5 ul li:last-child {
   border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 .navbar .nav-left .submenu5 ul a {
   color: #7a6eaa;
@@ -309,7 +315,6 @@
 }
 .navbar .nav-right ul #select-network-wrapper:hover {
   cursor: pointer;
-  /*background-color: var(--select-net-bg-color-hover);*/
 }
 .navbar .nav-right ul #select-network-wrapper:hover #select-network {
   color: var(--select-net-txt-color-hover);
@@ -370,7 +375,7 @@
   gap: 1rem;
 }
 .navbar .nav-right ul #select-network-wrapper:hover #network-selection li:not(.navbar .nav-right ul #select-network-wrapper:hover #network-selection li:first-child):hover {
-  background-color: #EFF4F5;
+  background-color: var(--nav-item-hover);
 }
 .navbar .nav-right ul #select-network-wrapper:hover #network-selection li:last-child {
   border-bottom-left-radius: 20px;

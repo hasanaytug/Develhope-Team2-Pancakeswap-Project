@@ -26,6 +26,9 @@
     --select-net-txt-color-alt: #{f.$select-net-txt-color-alt};
     --net-selection-bg-color: #{f.$net-selection-bg-color};
     --net-selection-bg-color-alt: #{f.$net-selection-bg-color-alt};
+    --nav-item-hover: #{f.$nav-item-hover};
+    --nav-item-hover-alt: #{f.$nav-item-hover-alt};
+    --net-li-hover: 
 
 }
 
@@ -132,7 +135,7 @@
             }
 
             li.item:hover {
-                background-color: #EFF4F5;
+                background-color: var(--nav-item-hover);
                 border-radius: f.rem(10);
             }
         }
@@ -162,7 +165,7 @@
 
                     li:hover {
                         cursor: pointer;
-                        background: f.$hoverbg;
+                        background: var(--nav-item-hover);
                     }
                 }
             }
@@ -175,6 +178,7 @@
      
                 li:last-child {
                     border-bottom-left-radius: 20px;
+                    border-bottom-right-radius: 20px;
                 }
             }
             position: absolute;
@@ -209,13 +213,17 @@
             padding: 0.7rem;
         }
 
+        
         .sumenu1 .item:hover ul {
             display: block;
-            background: f.$hoverbg;
+            background: green;
+            //f.$hoverbg;
             border-radius: 0.575rem;
             padding-left: f.rem(1);
             z-index: 1000;
+            border: 1px solid red;
         }
+        
 
         li:hover .submenu1,
         .submenu1:hover {
@@ -243,22 +251,22 @@
             .submenu5 {
                 display: block;
                 position: absolute;
-                background-color: f.$bgcolor;
                 margin-top: 1.06rem;
                 padding-left: f.rem(1);
                 width: f.$bg-widt;
                 border-radius: f.rem(20);
-    
+                background-color: var(--navbar-bg-color);
+                
                 ul {
                     display: block;
                     li:hover {
                         cursor: pointer;
-                        background: f.$hoverbg;
+                        background: var(--nav-item-hover);
                     }
                 }
             }
         }
-
+        
         .submenu5 {
             display: none;
             margin-left: f.rem(-13);
@@ -282,6 +290,7 @@
                 
                 li:last-child {
                     border-bottom-left-radius: 20px;
+                    border-bottom-right-radius: 20px;
                 }
                     
                 a {
@@ -368,14 +377,10 @@
 
                 &:hover {
                     cursor: pointer;
-                    /*background-color: var(--select-net-bg-color-hover);*/
-
-                    
+                
                     #select-network {
                         color: var(--select-net-txt-color-hover);
-                    }
-                    
-                    
+                    }    
                     
                     #network-down-arrow {
                         opacity: 0.5;
@@ -440,7 +445,7 @@
                             gap: 1rem;
 
                             &:hover {
-                                background-color: #EFF4F5;
+                                background-color: var(--nav-item-hover);
                             }
                         }
                         

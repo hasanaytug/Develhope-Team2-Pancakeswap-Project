@@ -44,7 +44,8 @@ themeButton.addEventListener('click', () => {
         r.style.setProperty('--net-selection-bg-color',
             getComputedStyle(r).getPropertyValue('--net-selection-bg-color-alt'));
 
-        
+        r.style.setProperty('--nav-item-hover',
+            getComputedStyle(r).getPropertyValue('--nav-item-hover-alt'));
         
 
         
@@ -58,6 +59,7 @@ themeButton.addEventListener('click', () => {
         r.style.setProperty('--select-net-txt-color', '');
         r.style.setProperty('--select-net-txt-color-hover', '');
         r.style.setProperty('--net-selection-bg-color', '');
+        r.style.setProperty('--nav-item-hover', '');
     }
 
 });
