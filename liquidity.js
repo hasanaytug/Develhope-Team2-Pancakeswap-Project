@@ -11,9 +11,22 @@
 //   sbtn.classList.add('secondBtn');
 // })
 
-const addLqdty = document.querySelector('.add-liquidity');
-const secondPageUp = document.querySelector('#seondPage-hide');
+const addLqdtyCL = document.querySelector('.add-liquidityClick');
+const addLqdtybtn = document.querySelector('.add-liquidity');
 
-addLqdty.addEventListener('click', () => {
-  secondPageUp.classList.add('seondPage-hide');
+const secondPageUp = document.querySelector('.seondPage-hide');
+
+const arrlft = document.querySelector('.fa-arrow-left');
+
+addLqdtybtn.addEventListener('click', () => {
+  addLqdtyCL.classList.add('hideMainPage');
+
+  secondPageUp.classList.remove('seondPage-hide');
 })
+
+arrlft.addEventListener('click', () => {
+  secondPageUp.classList.add('seondPage-hide');
+  addLqdtyCL.classList.remove('hideMainPage');
+});
+
+console.log('Hellow');
