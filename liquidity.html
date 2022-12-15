@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css">
+  <link rel="stylesheet" href="liquidity.css">
+  <title>Document</title>
+</head>
+<body>
+  <!--this 'add-liquidity' is for changing the page by clicki the Add Liquidity-->
+  <div class="add-liquidityClick">
+    <header class="trade-nav">
+      <div class="tradeNav-item">
+        <a href="#">Swap</a>
+        <a href="#">Limit</a>
+        <a href="#">Liquidity</a>
+        <a href="#">Perpertual</a>
+        <a href="#">Bridge</a>
+      </div>
+    </header>
+    <div class="liquidity-main-area">
+      <div class="cardContainer">
+        <div id="liquid-card">
+          <div class="card-top">
+            <div class="your-liquid">
+              <h2>Your Liquidity</h2>
+              <div class="icons">
+                <i class="fa-solid fa-gear"></i>
+                <i class="fa-solid fa-clock-rotate-left" id=""></i>
+              </div>
+            </div>
+            <div class="remove-lqd">Remove liquidity to eeceive tokens back</div>
+          </div>
+          <div class="connect-toWallet">Connect to a wallet to view your liquidity</div>
+
+          <button class="add-liquidity">
+            <i class="fa-solid fa-plus"></i>
+            <h2>Add Liquidity</h2></button>
+        </div>
+      </div>
+      <div class="empty-area"></div>
+      <div class="footer-area">
+        <a href="">Bridge assets to BNB Chain</a>
+        <div class="footer-right">
+          <a href="https://docs.pancakeswap.finance/help">Need help?</a>
+          <img src="https://cdn.pancakeswap.com/help/help.png" alt="Get
+           some help" class="sc-8ebf47af-0 kqjEBp" width="160" height="108">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!--SECOND PAGE FROM HERE-->
+  <div class="seondPage-hide">
+
+    <header class="trade-nav2">
+    </header>
+    <div class="liquidity-main-area2">
+      
+      <div class="cardContainer2">
+        <div id="liquid-card2">
+          <div class="card-top2">
+            <div class="arrDiv">
+              <i class="fa-solid fa-arrow-left"></i>
+            </div>
+            <div class="top-center2">
+              <div class="topItems">
+                <div class="qnh2">
+                  <h2>Add Liquidity</h2>
+                  <i class="fa-regular fa-circle-question"></i>
+                </div>
+               
+                <div class="twoIcons">
+                  <i class="fa-solid fa-gear"></i>
+                  <i class="fa-solid fa-clock-rotate-left"></i>
+                </div>  
+              </div>
+              <div class="receiveLp">
+                Receive LP tokens and earn 0.17% trading fees
+              </div>
+            </div>
+          </div>
+          <!--second page center area-->
+          <div class="card-center">
+            <div class="chooseVp">Choose a valid pair</div>
+            <div class="secondPbtns">
+              <div class="lbtndiv">
+                <button class="lbtn">BNB <i class="fa-solid fa-caret-down"></i></button>
+              </div>
+              <i class="fa-solid fa-plus"></i>
+              <div class="rbtndiv">
+                <button class="rbtn">CAKE <i class="fa-solid fa-caret-down"></i></button>
+              </div>
+            </div>
+
+            <div class="wrapLp">
+                <div  class="lpText" font-size="12px">LP reward APR
+                </div>
+              <div font-size="16px" class="down">0.76%</div>
+            </div>
+          </div>
+          <div class="btnConnet">
+            <button class="connectWlt">
+              <h2>Connect Wallet</h2>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="innerpage-center">
+        <div class="textWraper">
+          <div class="tex-content">
+            🥞 By adding liquidity you'll earn 0.17% of all trades on this pair proportional to your share of the pool. Fees are added to the pool, accrue in real time and can be claimed by withdrawing your liquidity.
+          </div>
+        </div>
+      </div>
+      <div class="footer-area2">
+        <a href="">Bridge assets to BNB Chain</a>
+        <div class="footer-right2">
+          <a href="https://docs.pancakeswap.finance/help">Need help?</a>
+          <img src="https://cdn.pancakeswap.com/help/help.png" alt="Get
+           some help" class="sc-8ebf47af-0 kqjEBp" width="145" height="97">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="liquidity.js"></script>
+</html>
