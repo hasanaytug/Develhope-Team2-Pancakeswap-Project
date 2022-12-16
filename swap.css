@@ -1,5 +1,6 @@
 body {
   background-color: rgb(239, 244, 255);
+  font-family: "Roboto", sans-serif;
 }
 
 .legend {
@@ -59,4 +60,81 @@ body {
 
 .coin-rate {
   font-size: 1.5rem;
+}
+
+.coin-difference {
+  color: rgb(49, 208, 170);
+}
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calc-top {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calc-title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+hr {
+  margin-top: 20px;
+  height: 1px;
+  width: 100%;
+}
+
+.calc-mid {
+  margin-top: 20px;
+}
+
+.switch {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.scan-risk {
+  display: flex;
+  justify-content: end;
+}
+
+.slippage {
+  display: flex;
+  justify-content: space-between;
+}
+
+.connect {
+  display: flex;
+  justify-content: center;
+}
+
+.middle-right {
+  background-color: #eff4f5;
+  border-radius: 20px;
+}
+
+.btn {
+  color: rgb(104, 215, 224);
+  border-radius: 20px;
+  border: none;
+  background-color: #eff4f5;
+  width: 40px;
+  padding: 3px 0px;
+}
+
+.clicked {
+  color: white;
+  background-color: rgb(104, 215, 224);
+}
+
+.middle-right button:hover {
+  color: rgb(149, 229, 236);
 }

@@ -1,3 +1,8 @@
+const yearButton = document.querySelector(".year");
+const monthButton = document.querySelector(".month");
+const weekButton = document.querySelector(".week");
+const dayButton = document.querySelector(".day");
+
 const chart = LightweightCharts.createChart(
   document.querySelector("#tvchart"),
   {
@@ -236,24 +241,50 @@ const dataYear = [
 
 areaSeries.setData(dataYear);
 
+document.querySelector(".middle-right").addEventListener("click", (e) => {
+  e.preventDefault;
+  const targetName = e.target.className;
+
+  if (targetName === "year") {
+    areaSeries.setData(dataYear);
+  } else if (targetName === "month") {
+    areaSeries.setData(dataMonth);
+  } else if (targetName === "week") {
+    areaSeries.setData(dataWeek);
+  } else if (targetName === "day") {
+    areaSeries.setData(dataDay);
+  }
+});
+
+function addRemoveClicked(a, b, c, d) {
+  a.classList.remove("clicked");
+  b.classList.remove("clicked");
+  c.classList.remove("clicked");
+  d.classList.add("clicked");
+}
+
 document.querySelector(".year").addEventListener("click", (e) => {
   e.preventDefault;
   areaSeries.setData(dataYear);
+  addRemoveClicked(monthButton, weekButton, dayButton, yearButton);
 });
 
 document.querySelector(".month").addEventListener("click", (e) => {
   e.preventDefault;
   areaSeries.setData(dataMonth);
+  addRemoveClicked(yearButton, weekButton, dayButton, monthButton);
 });
 
 document.querySelector(".week").addEventListener("click", (e) => {
   e.preventDefault;
   areaSeries.setData(dataWeek);
+  addRemoveClicked(yearButton, monthButton, dayButton, weekButton);
 });
 
 document.querySelector(".day").addEventListener("click", (e) => {
   e.preventDefault;
   areaSeries.setData(dataDay);
+  addRemoveClicked(yearButton, weekButton, monthButton, dayButton);
 });
 
 document.body.style.position = "relative";
