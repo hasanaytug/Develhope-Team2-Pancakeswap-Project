@@ -45,6 +45,11 @@ body {
   align-items: center;
 }
 
+.top-right button {
+  background: none;
+  border: none;
+}
+
 .middle {
   width: 700px;
   margin-top: 10px;
@@ -148,8 +153,10 @@ hr {
 }
 
 .slippage {
+  width: 100%;
   display: flex;
   justify-content: space-between;
+  font-size: 0.8rem;
 }
 
 .connect {
@@ -196,4 +203,20 @@ hr {
 
 .switch-btn:active {
   transform: translateY(2px);
+}
+
+.right-buttons button {
+  background: none;
+  border: none;
+}
+
+.connect-wallet {
+  font-size: 1.1rem;
+  font-weight: bolder;
+  color: white;
+  height: 50px;
+  width: 250px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(104, 215, 224);
 }
