@@ -16,14 +16,14 @@ body {
 .main {
   display: flex;
   justify-content: space-between;
-  padding-left: 19%;
-  padding-right: 19%;
+  padding-left: 13%;
+  padding-right: 13%;
   margin-top: 20px;
 }
 
 .graph {
   width: 720px;
-  height: 300px;
+  height: 500px;
   background-color: rgb(245, 252, 255);
   display: flex;
   flex-direction: column;
@@ -31,6 +31,7 @@ body {
   align-items: center;
   border-radius: 10px;
   box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.1);
+  padding: 0px 10px;
 }
 
 .top {
@@ -41,6 +42,7 @@ body {
 }
 .top-left {
   display: flex;
+  align-items: center;
 }
 
 .middle {
@@ -48,11 +50,15 @@ body {
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .calculator {
-  width: 200px;
-  height: 300px;
+  width: 300px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.1);
@@ -66,23 +72,30 @@ body {
   color: rgb(49, 208, 170);
 }
 
-.calculator {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .calc-top {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.calc-title {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: flex-start;
+}
+
+.right-buttons {
+  align-self: flex-end;
+  padding-right: 10%;
+}
+
+.calc-info {
+  font-size: 0.8rem;
+  margin-top: 0;
+  padding-left: 10%;
+}
+
+.swap-title {
+  width: 300px;
+  font-size: 1.2rem;
+  margin-bottom: 0;
+  padding-left: 10%;
 }
 
 hr {
@@ -93,6 +106,27 @@ hr {
 
 .calc-mid {
   margin-top: 20px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inputs {
+  margin-top: 5px;
+  height: 50px;
+  width: 250px;
+  text-align: end;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(238, 234, 244);
+}
+
+.calc-coins {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
 }
 
 .switch {
@@ -100,10 +134,17 @@ hr {
   display: flex;
   justify-content: center;
 }
+.switch-button {
+  width: 40px;
+  color: rgb(104, 215, 224);
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgb(238, 234, 244);
+}
 
 .scan-risk {
-  display: flex;
-  justify-content: end;
+  align-self: flex-end;
 }
 
 .slippage {
@@ -119,14 +160,16 @@ hr {
 .middle-right {
   background-color: #eff4f5;
   border-radius: 20px;
+  height: 30px;
 }
 
 .btn {
   color: rgb(104, 215, 224);
+  font-size: 1.1rem;
   border-radius: 20px;
   border: none;
   background-color: #eff4f5;
-  width: 40px;
+  width: 60px;
   padding: 3px 0px;
 }
 
@@ -137,4 +180,20 @@ hr {
 
 .middle-right button:hover {
   color: rgb(149, 229, 236);
+}
+
+.switch-btn {
+  color: rgb(104, 215, 224);
+  border: none;
+  background: none;
+  margin-left: 10px;
+}
+
+.switch-btn:hover {
+  color: rgb(66, 175, 185);
+  cursor: pointer;
+}
+
+.switch-btn:active {
+  transform: translateY(2px);
 }

@@ -1,13 +1,19 @@
+//Dom elements
+
 const yearButton = document.querySelector(".year");
 const monthButton = document.querySelector(".month");
 const weekButton = document.querySelector(".week");
 const dayButton = document.querySelector(".day");
+const switchButton = document.querySelector(".switch-btn");
+let switchToggle = false;
+
+//Graph creation
 
 const chart = LightweightCharts.createChart(
   document.querySelector("#tvchart"),
   {
     width: 700,
-    height: 200,
+    height: 350,
     layout: {
       textColor: "#d1d4dc",
       backgroundColor: "rgb(245, 252, 255)",
@@ -49,44 +55,18 @@ const areaSeries = chart.addAreaSeries({
   crossHairMarkerVisible: false,
 });
 
-const dataDay = [{ time: "2019-05-28", value: 26.23 }];
+//Switching coins for exchange rates function
 
-const dataWeek = [
-  { time: "2019-05-17", value: 26.09 },
-  { time: "2019-05-20", value: 26.01 },
-  { time: "2019-05-21", value: 26.12 },
-  { time: "2019-05-22", value: 26.15 },
-  { time: "2019-05-23", value: 26.18 },
-  { time: "2019-05-24", value: 26.16 },
-  { time: "2019-05-28", value: 26.23 },
-];
+function switchExchangeRates(arrayData) {
+  return arrayData.map((item) => ({
+    time: item.time,
+    value: 1 / item.value,
+  }));
+}
 
-const dataMonth = [
-  { time: "2019-04-26", value: 25.88 },
-  { time: "2019-04-29", value: 25.91 },
-  { time: "2019-04-30", value: 25.9 },
-  { time: "2019-05-01", value: 26.02 },
-  { time: "2019-05-02", value: 25.97 },
-  { time: "2019-05-03", value: 26.02 },
-  { time: "2019-05-06", value: 26.03 },
-  { time: "2019-05-07", value: 26.04 },
-  { time: "2019-05-08", value: 26.05 },
-  { time: "2019-05-09", value: 26.05 },
-  { time: "2019-05-10", value: 26.08 },
-  { time: "2019-05-13", value: 26.05 },
-  { time: "2019-05-14", value: 26.01 },
-  { time: "2019-05-15", value: 26.03 },
-  { time: "2019-05-16", value: 26.14 },
-  { time: "2019-05-17", value: 26.09 },
-  { time: "2019-05-20", value: 26.01 },
-  { time: "2019-05-21", value: 26.12 },
-  { time: "2019-05-22", value: 26.15 },
-  { time: "2019-05-23", value: 26.18 },
-  { time: "2019-05-24", value: 26.16 },
-  { time: "2019-05-28", value: 26.23 },
-];
+//Temporariry data for the exchange rates
 
-const dataYear = [
+let dataYear = [
   { time: "2018-10-19", value: 26.19 },
   { time: "2018-10-22", value: 25.87 },
   { time: "2018-10-23", value: 25.83 },
@@ -239,7 +219,40 @@ const dataYear = [
   { time: "2019-05-28", value: 26.23 },
 ];
 
+let dataDay = dataYear.slice(-1);
+
+let dataWeek = dataYear.slice(-7);
+
+let dataMonth = dataYear.slice(-31);
+
+switchButton.addEventListener("click", (e) => {
+  e.preventDefault;
+  dataWeek = switchExchangeRates(dataWeek);
+  dataMonth = switchExchangeRates(dataMonth);
+  dataDay = switchExchangeRates(dataDay);
+  dataYear = switchExchangeRates(dataYear);
+
+  if (dayButton.classList.contains("clicked")) {
+    areaSeries.setData(dataDay);
+  }
+  if (weekButton.classList.contains("clicked")) {
+    areaSeries.setData(dataWeek);
+  }
+  if (monthButton.classList.contains("clicked")) {
+    areaSeries.setData(dataMonth);
+  }
+  if (yearButton.classList.contains("clicked")) {
+    areaSeries.setData(dataYear);
+  }
+
+  console.log(areaSeries.topColor);
+});
+
+//initial setting data for the graph
+
 areaSeries.setData(dataYear);
+
+//Data changes by year-week-month-day clicks
 
 document.querySelector(".middle-right").addEventListener("click", (e) => {
   e.preventDefault;
@@ -262,6 +275,8 @@ function addRemoveClicked(a, b, c, d) {
   c.classList.remove("clicked");
   d.classList.add("clicked");
 }
+
+// button click style changes
 
 document.querySelector(".year").addEventListener("click", (e) => {
   e.preventDefault;
@@ -287,6 +302,8 @@ document.querySelector(".day").addEventListener("click", (e) => {
   addRemoveClicked(yearButton, weekButton, monthButton, dayButton);
 });
 
+//Graph applied to the page
+
 document.body.style.position = "relative";
 
 const legend = document.createElement("div");
@@ -307,7 +324,13 @@ chart.subscribeCrosshairMove((param) => {
   if (param.time) {
     const price = param.seriesPrices.get(areaSeries);
 
-    document.querySelector(".coin-rate").innerText = price;
+    const decimalPlaces = price.toString().split(".")[1].length;
+
+    if (decimalPlaces > 2) {
+      document.querySelector(".coin-rate").innerText = price.toFixed(4);
+    } else {
+      document.querySelector(".coin-rate").innerText = price;
+    }
 
     firstRow.innerText = "ETC USD 7D VWAP" + "  " + price.toFixed(2);
   } else {

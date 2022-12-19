@@ -26,6 +26,10 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
     <title>PanckakeSwap Project</title>
   </head>
   <body>
@@ -33,11 +37,25 @@
       <div class="graph">
         <div class="top">
           <div class="top-left">
-            <img src="" alt="coin-1-logo" />
-            <img src="" alt="coin-2-logo" />
+            <img
+              id="coin-icon-1"
+              src="assets/binance-coin-bnb-icon.svg"
+              alt="coin-1-logo"
+              height="20px"
+              width="20px"
+            />
+            <img
+              src="assets/pancakeswap-cake-logo.svg"
+              alt="coin-2-logo"
+              height="20px"
+              width="20px"
+            />
             <p>
-              <span class="coin1">Coin1</span>/<span class="coin2">Coin2</span>
+              <span class="coin1">BNB</span>/<span class="coin2">CAKE</span>
             </p>
+            <button class="switch-btn">
+              <i class="fa-solid fa-sm fa-repeat"></i>
+            </button>
           </div>
           <div class="top-right">
             <button>switch</button>
@@ -64,33 +82,60 @@
       <div class="calculator">
         <div class="calc-top">
           <div class="calc-title">
-            <button class="graph-toggle"></button>
             <p class="swap-title">Swap</p>
-            <div class="right-buttons">
-              <button class="settings">
-                <i class="fa fa-cog" aria-hidden="true"></i>
-              </button>
-              <button class="recent-swaps"></button>
-              <button class="refresh"></button>
-            </div>
           </div>
           <p class="calc-info">Trade tokens in an instant</p>
+          <div class="right-buttons">
+            <button class="graph-toggle"></button>
+            <button class="settings">
+              <i class="fa fa-cog" aria-hidden="true"></i>
+            </button>
+            <button class="recent-swaps"></button>
+            <button class="refresh"></button>
+          </div>
         </div>
         <hr />
         <div class="calc-mid">
           <div class="first-coin">
-            <button class="first-coin-name">BNB</button>
+            <button class="first-coin-name calc-coins">
+              <img
+                id="coin-icon-1"
+                src="assets/binance-coin-bnb-icon.svg"
+                alt="coin-1-logo"
+                height="20px"
+                width="20px"
+              />BNB
+            </button>
             <form action="" method="get" class="first-coin-form">
-              <input id="first-coin-input" type="number" placeholder="0.0" />
+              <input
+                id="first-coin-input"
+                class="inputs"
+                type="number"
+                placeholder="0.0"
+              />
             </form>
           </div>
           <div class="switch">
-            <button class="switch-button">Switch</button>
+            <button class="switch-button">
+              <i class="fa-solid fa-sm fa-repeat"></i>
+            </button>
           </div>
           <div class="second-coin">
-            <button class="second-coin-name">BNB</button>
+            <button class="second-coin-name calc-coins">
+              <img
+                src="assets/pancakeswap-cake-logo.svg"
+                alt="coin-2-logo"
+                height="20px"
+                width="20px"
+              />CAKE
+            </button>
             <form action="" method="get" class="second-coin-form">
-              <input id="second-coin-input" type="number" placeholder="0.0" />
+              <input
+                id="second-coin-input"
+                class="inputs"
+                type="number"
+                placeholder="0.0"
+              />
             </form>
           </div>
           <div class="scan-risk">
