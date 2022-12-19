@@ -14,9 +14,7 @@ const r = document.querySelector(':root');
 themeButton.addEventListener('click', () => {
     let themeBtnState = Number(themeButton.checked);
     themeIcon.src = `${dir}${themeIcons[themeBtnState]}.svg`
-
     navbarLogo.src = `./Full Logo/color-${navbarLogos[themeBtnState]}.svg`;
-
 
     if (themeBtnState) {
         r.style.setProperty('--navbar-bg-color', 
@@ -45,11 +43,7 @@ themeButton.addEventListener('click', () => {
             getComputedStyle(r).getPropertyValue('--net-selection-bg-color-alt'));
 
         r.style.setProperty('--nav-item-hover',
-            getComputedStyle(r).getPropertyValue('--nav-item-hover-alt'));
-        
-
-        
-        
+            getComputedStyle(r).getPropertyValue('--nav-item-hover-alt'));    
     } else {
         r.style.setProperty('--navbar-bg-color', '');
         r.style.setProperty('--sublang-top-txt-color', '');
@@ -61,32 +55,8 @@ themeButton.addEventListener('click', () => {
         r.style.setProperty('--net-selection-bg-color', '');
         r.style.setProperty('--nav-item-hover', '');
     }
-
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
 /* Language switching (only abbreviation for now) */
 const langButtons = document.querySelectorAll('#footer-langs button');
 const langAbbr = document.querySelector('#lang-icons-wrapper > p');
