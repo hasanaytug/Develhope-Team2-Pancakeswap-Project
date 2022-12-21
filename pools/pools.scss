@@ -1,7 +1,7 @@
 @use '../variables' as i;
 /* this debug is for test */
 .debug {
-    border: 1px solid i.$ibrahim-debug-color;
+    // border: 1px solid i.$ibrahim-debug-color;
 }
 
 .ibrahim-pool-head {
@@ -75,6 +75,7 @@
 .ibrahim-pool-middle-foot {
     display: grid;
     align-items: center;
+    justify-content: center;
     height: 250px;
 }
 
@@ -172,7 +173,7 @@ label {
     margin: 0px;
     width: 140px;
     height: 30px;
-    background: #E0E0E0;
+    background: #EEEAF4; // #E0E0E0
     border-radius: 26px;
     overflow: hidden;
     position: relative;
@@ -195,7 +196,7 @@ label {
     content: attr(data-off);
     width: 70px;
     height: 16px;
-    background: #fff;
+    background: #A39AC4; // #fff
     border-radius: 26px;
     position: absolute;
     left: 2px;
@@ -225,14 +226,14 @@ label {
 }
 
 .btn-color-mode-switch input[type="checkbox"]:checked+label.btn-color-mode-switch-inner {
-    background: #151515;
+    background: #EEEAF4; // #151515
     color: #fff;
 }
 
 .btn-color-mode-switch input[type="checkbox"]:checked+label.btn-color-mode-switch-inner:after {
     content: attr(data-on);
     left: 68px;
-    background: #3c3c3c;
+    background: #A39AC4; // #3c3c3c
 }
 
 .btn-color-mode-switch input[type="checkbox"]:checked+label.btn-color-mode-switch-inner:before {
@@ -256,7 +257,7 @@ label {
 }
 
 .dark-preview div.btn-container i.fa-sun-o {
-    color: #777;
+    color: #777; // #A39AC4
 }
 
 .dark-preview div.btn-container i.fa-moon-o {
@@ -294,6 +295,9 @@ p.by a {
 
 #country {
     background-color: #EEEAF4;
+    width: 180px;
+    border-radius: 15px;
+    text-indent: 10px;
 }
 
 // search
@@ -303,8 +307,9 @@ form.example input[type=text] {
     font-size: 17px;
     border: 1px solid grey;
     float: left;
-    width: 80%;
-    background: #f1f1f1;
+    width: 100%;
+    background: #EEEAF4;
+    border-radius: 15px;
 }
 
 form.example::after {
@@ -316,12 +321,16 @@ form.example::after {
 .ibrahim-pool-middle-head-left {
     display: flex;
     padding: 10px;
+    width: 300px;
     align-items: center;
+    justify-content: space-between;
 }
 
 .ibrahim-pool-middle-head-right {
     display: flex;
     padding: 10px;
+    width: 500px;
+    justify-content: space-between;
     // align-items: center;
 }
 
