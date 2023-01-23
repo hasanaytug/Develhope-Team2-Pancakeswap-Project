@@ -1,7 +1,7 @@
 import React from "react";
 import "./swap.css";
 import SecondChartComponent from "./SecondChartComponent";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Calculator from "./Calculator";
 
 const Graph = (props) => {
@@ -11,7 +11,7 @@ const Graph = (props) => {
   const handleClick = (event) => {
     setButtonInfo(event.target.innerHTML);
   };
-
+  useEffect(() => handleSetCoinValue, []);
   function handleSetCoinValue(data) {
     setCoinValue(data);
   }
